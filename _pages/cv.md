@@ -1,5 +1,4 @@
 ---
-layout: archive
 title: "CV"
 permalink: /cv/
 author_profile: true
@@ -11,49 +10,29 @@ redirect_from:
 
 Education
 ======
-* B.S. in Physics, Beijing University of Technology, 2004
-* Ph.D in Physics, Beijing University of Technology, 2010
+* B.S. in Physics, Beijing University of Technology, 2000-2004
+* Ph.D in Physics, Beijing University of Technology, 2005-2010
 
 
 Work experience
-======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+===============
+* 2015-now: Assistant Researcher, Beijing Institute of Nanoenergy and Nanosystems, Chinese Academy of Sciences.
+* 2013-2015: Postdoc, International center for quantum materials, Peking University.
+* 2010-2013: Manager of R&D department, Beijing Salien Corporation.
   
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+Research Interests
+=================
+* **Nanogenerators, nanosensors and nanodevices.** We use Physical-Chemical methods to prepare nano-materials with unique properties for energy harvesting, self-powered sensor and energy storage. 
+* **Scattering spectrum study of materials with strong electron correlations.** We use spectroscopic methods to study the structure and coupling dynamics in transition-metal compounds.
+* **Data mining.** We use AI algorithms to analysis the recorded data from sensor network.
 
 Publications
 ======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+1. **Xinyu Du**, Nianwu Li, Yuebo Liu, Jiaona Wang, Zuqing Yuan, Yingying Yin, Ran Cao, Shuyu Zhao, Bin Wang, Zhong Lin Wang and Congju Li, "Ultra-robust  triboelectric nanogenerator for harvesting rotary mechanical energy", [*Nano Res.* accepted (2017)](http://www.thenanoresearch.com/work_just.asp)
+2. Congju Li, Yingying Yin, Bin Wang, Tao Zhou, Jiaona Wang, Jianjun Luo, Wei Tang, Ran Cao, Zuqing Yuan, Nianwu Li, **Xinyu Du**, Chunru Wang, Shuyu Zhao, Yuebo Liu, and Zhong Lin Wang, "Self-Powered Electrospinning System Driven by a Triboelectric Nanogenerator", [*ACS Nano* **11**, 10439-10445 (2017)](http://pubs.acs.org/doi/10.1021/acsnano.7b05626)
+3. Chong Wang, Daiwei Yu, Xiaoqiang Liu, Rongyan Chen, **Xinyu Du**, Biaoyan Hu, Lichen Wang, Kazuki Iida, Kazuya Kamazawa, Shuichi Wakimoto, Ji Feng, Nanlin Wang, and Yuan Li, "Observation of magnetoelastic effects in a quasi-one-dimensional spiral magnet", [*Phys. Rev. B* **96**, 085111 (2017)](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.96.085111)
+4. S. M. Souliou, Y. Li, **X. Du**, M. Le Tacon, and A. Bosak, "Soft-phonon-driven orbital order in CaMn<sub>7</sub>O<sub>12</sub>", [*Phys. Rev. B* **94**, 184309 (2016)](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.94.184309)
+5. **Xinyu Du**, Chunlin Zhao, Jinxi Zhang, and Kailiang Ren, "Study of field-induced chain conformation transformation in poly(L-lactic acid) based piezoelectric film by infrared spectroscopy", [*J. Appl. Phys.* **120**,164101 (2016)](http://aip.scitation.org/doi/10.1063/1.4965716)
+6. Renliang Yuan, Lian Duan, **Xinyu Du**, and Yuan Li, "Identification and mechanical control of ferroelastic domain structure in rhombohedral CaMn<sub>7</sub>O<sub>12</sub>", [*Phys. Rev. B* **91**, 054102 (2015)](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.91.054102)
+7. **Xinyu Du**, Renliang Yuan, Lian Duan, Chong Wang, Yuwen Hu, and Yuan Li, "Soft vibrational mode associated with incommensurate orbital order in multiferroic 
+CaMn<sub>7</sub>O<sub>12</sub>", [*Phys. Rev. B* **90**, 104414 (2014)](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.90.104414)
