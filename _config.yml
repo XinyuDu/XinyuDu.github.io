@@ -81,8 +81,14 @@ author:
   name             : "杜新宇"
   avatar           : "profile.png"
   bio              : "博士，助理研究员，中科院北京纳米能源与系统研究所"
-  location         : "中国北京"
-  employer         : 
+  location         : "地址"
+  locationlink     : "http://j.map.baidu.com/jSsvN"
+  employer         : "北京纳米能源与系统研究所"
+  employerlink     : "http://www.binn.cas.cn"
+  icqm             : "北京大学国际量子材料中心"
+  icqmlink         : "http://icqm.pku.edu.cn/"
+  bjut             : "北京工业大学激光研究院"
+  bjutlink         : "http://jgy.bjut.edu.cn/"
   googlescholar    :
   email            :
   uri              :
