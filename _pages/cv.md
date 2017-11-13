@@ -1,4 +1,5 @@
 ---
+layout: archive
 title: "CV"
 permalink: /cv/
 author_profile: true
@@ -28,6 +29,10 @@ Research Interests
 
 Publications
 ======
+  <ul>{% for post in site.publications %}
+    {% include archive-single-cv.html %}
+  {% endfor %}</ul>
+  	
 1. **Xinyu Du**, Nianwu Li, Yuebo Liu, Jiaona Wang, Zuqing Yuan, Yingying Yin, Ran Cao, Shuyu Zhao, Bin Wang, Zhong Lin Wang, and Congju Li, "Ultra-robust  triboelectric nanogenerator for harvesting rotary mechanical energy", [*Nano Res.* accepted (2017)](http://www.thenanoresearch.com/work_just.asp)
 2. Congju Li, Yingying Yin, Bin Wang, Tao Zhou, Jiaona Wang, Jianjun Luo, Wei Tang, Ran Cao, Zuqing Yuan, Nianwu Li, **Xinyu Du**, Chunru Wang, Shuyu Zhao, Yuebo Liu, and Zhong Lin Wang, "Self-Powered Electrospinning System Driven by a Triboelectric Nanogenerator", [*ACS Nano* **11**, 10439-10445 (2017)](http://pubs.acs.org/doi/10.1021/acsnano.7b05626)
 3. Chong Wang, Daiwei Yu, Xiaoqiang Liu, Rongyan Chen, **Xinyu Du**, Biaoyan Hu, Lichen Wang, Kazuki Iida, Kazuya Kamazawa, Shuichi Wakimoto, Ji Feng, Nanlin Wang, and Yuan Li, "Observation of magnetoelastic effects in a quasi-one-dimensional spiral magnet", [*Phys. Rev. B* **96**, 085111 (2017)](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.96.085111)
