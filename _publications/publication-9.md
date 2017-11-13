@@ -2,7 +2,7 @@
 title: "Self-Powered Electrospinning System Driven by a Triboelectric Nanogenerator"
 collection: publications
 permalink: /publication/publication-9
-excerpt: 'Congju Li, Yingying Yin, Bin Wang, Tao Zhou, Jiaona Wang, Jianjun Luo, Wei Tang, Ran Cao, Zuqing Yuan, Nianwu Li, <b>Xinyu Du</b>, Chunru Wang, Shuyu Zhao, Yuebo Liu, and Zhong Lin Wang'
+excerpt: ''
 date: 2017-09-19
 venue: 'ACS Nano'
 paperurl: 'https://doi.org/10.1021/acsnano.7b05626'

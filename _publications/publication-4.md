@@ -3,7 +3,7 @@ title: "Soft vibrational mode associated with incommensurate orbital order in mu
 CaMn<sub>7</sub>O<sub>12</sub>"
 collection: publications
 permalink: /publication/publication-4
-excerpt: '<b>Xinyu Du</b>, Renliang Yuan, Lian Duan, Chong Wang, Yuwen Hu, and Yuan Li'
+excerpt: ''
 date: 2014-09-17
 venue: 'Physical Rewiew B'
 paperurl: 'https://doi.org/10.1103/PhysRevB.90.104414'

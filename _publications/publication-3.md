@@ -2,7 +2,7 @@
 title: "Dielectric and Piezoelectric Properties of CO2 Laser Sintered Sr<sub>1.86</sub>Ca<sub>0.14</sub>NaNb<sub>5</sub>O<sub>15</sub> Piezoelectric Ceramic"
 collection: publications
 permalink: /publication/publication-3
-excerpt: '<b>Xinyu Du</b>, Lingfei Ji, and Yijian Jiang'
+excerpt: ''
 date: 2010-11-20
 venue: 'Ferroelectrics'
 paperurl: 'http://dx.doi.org/10.1080/00150191003709321'

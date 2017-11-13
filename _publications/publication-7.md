@@ -2,7 +2,7 @@
 title: "Soft-phonon-driven orbital order in CaMn<sub>7</sub>O<sub>12</sub>"
 collection: publications
 permalink: /publication/publication-7
-excerpt: 'S. M. Souliou, Y. Li, <b>X. Du</b>, M. Le Tacon, and A. Bosak'
+excerpt: ''
 date: 2016-11-22
 venue: 'Physical Review B'
 paperurl: 'https://doi.org/10.1103/PhysRevB.94.184309'

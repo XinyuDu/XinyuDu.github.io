@@ -2,7 +2,7 @@
 title: "Identification and mechanical control of ferroelastic domain structure in rhombohedral CaMn<sub>7</sub>O<sub>12</sub>"
 collection: publications
 permalink: /publication/publication-5
-excerpt: 'Renliang Yuan, Lian Duan, <b>Xinyu Du</b>, and Yuan Li'
+excerpt: ''
 date: 2015-02-03
 venue: 'Physical Review B'
 paperurl: 'https://doi.org/10.1103/PhysRevB.91.054102'

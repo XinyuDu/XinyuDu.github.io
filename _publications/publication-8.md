@@ -2,7 +2,7 @@
 title: "Observation of magnetoelastic effects in a quasi-one-dimensional spiral magnet"
 collection: publications
 permalink: /publication/publication-8
-excerpt: 'Chong Wang, Daiwei Yu, Xiaoqiang Liu, Rongyan Chen, <b>Xinyu Du</b>, Biaoyan Hu, Lichen Wang, Kazuki Iida, Kazuya Kamazawa, Shuichi Wakimoto, Ji Feng, Nanlin Wang, and Yuan Li'
+excerpt: ''
 date: 2017-08-08
 venue: 'Physical Review B'
 paperurl: 'https://doi.org/10.1103/PhysRevB.96.085111'

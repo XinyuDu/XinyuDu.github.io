@@ -2,7 +2,7 @@
 title: "Study of field-induced chain conformation transformation in poly(L-lactic acid) based piezoelectric film by infrared spectroscopy"
 collection: publications
 permalink: /publication/publication-6
-excerpt: '<b>Xinyu Du</b>, Chunlin Zhao, Jinxi Zhang, and Kailiang Ren'
+excerpt: ''
 date: 2016-10-24
 venue: 'Journal of Applied Physics'
 paperurl: 'https://doi.org/10.1063/1.4965716'

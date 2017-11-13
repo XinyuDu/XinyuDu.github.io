@@ -2,7 +2,7 @@
 title: "Laser sintering effects on the physical properties and structure of 0.94(K<sub>0.5</sub>Na<sub>0.5</sub>)NbO<sub>3</sub>-0.06LiTaO<sub>3</sub> lead-free piezoelectric ceramics"
 collection: publications
 permalink: /publication/publication-1
-excerpt: 'Lingfei Ji, Yijian Jiang, Yi Gao, and <b>Xinyu Du</b>'
+excerpt: ''
 date: 2009-04-01
 venue: 'Journal of Laser Applications'
 paperurl: 'https://doi.org/10.2351/1.3184430'

@@ -2,7 +2,7 @@
 title: "Physical Properties and Structure Characteristics of Laser Prepared (Na<sub>0.5</sub>K<sub>0.5</sub>)NbO<sub>3</sub>-LiNbO<sub>3</sub> Ceramics"
 collection: publications
 permalink: /publication/publication-2
-excerpt: 'Lingfei Ji, <b>Xinyu Du</b>, Yan Zhao, Jie Liu, and Yijian Jiang'
+excerpt: ''
 date: 2010-11-01
 venue: 'Ferroelectrics'
 paperurl: 'http://dx.doi.org/10.1080/00150193.2010.505498'
