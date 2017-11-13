@@ -11,14 +11,14 @@ redirect_from:
 
 Education
 ======
-* B.S. in Physics, Beijing University of Technology, 2000-2004
 * Ph.D in Physics, Beijing University of Technology, 2005-2010
+* B.S. in Physics, Beijing University of Technology, 2000-2004
 
 
 Work experience
 ===============
 * 2015-now: Assistant Researcher, Beijing Institute of Nanoenergy and Nanosystems, Chinese Academy of Sciences.
-* 2013-2015: Postdoc, International center for quantum materials, Peking University.
+* 2013-2015: Postdoc, International Center for Quantum Materials, Peking University.
 * 2010-2013: Manager of R&D department, Beijing Salien Corporation.
   
 Research Interests
