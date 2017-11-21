@@ -1,5 +1,5 @@
 ---
-title: "Dielectric and Piezoelectric Properties of CO2 Laser Sintered Sr<sub>1.86</sub>Ca<sub>0.14</sub>NaNb<sub>5</sub>O<sub>15</sub> Piezoelectric Ceramic"
+title: "Dielectric and Piezoelectric Properties of CO<sub>2</sub> Laser Sintered Sr<sub>1.86</sub>Ca<sub>0.14</sub>NaNb<sub>5</sub>O<sub>15</sub> Piezoelectric Ceramic"
 collection: publications
 permalink: /publication/publication-3
 excerpt: ''
