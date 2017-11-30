@@ -19,4 +19,4 @@ mechanical energy. Here we report a scale-like structured TENG (SL-TENG), in
 which the two triboelectric layers work in contact-separation mode to avoid the in-plane relative sliding in order to minimize abrasion. As a result, the SL-TENG shows outstanding robustness. The output voltage does not exhiit 
 measurable decay after continuously generating more than 1 million cycles. The SL-TENG can generate a maximum short-circuit current of 78  μA, delivering instantaneous power density of 2.54 W/m<sup>2</sup> to external load at a very low rotation rate of 120 rpm. A discharge capacity of 0.1 mAh is achieved after a 30 min charging of an Li-ion battery by SL-TENG. A continuous d.c. output of 5 V is achieved by using a power management circuit, which provides enough d.c. power for driving a radio-frequency (RF) wireless sensor and other conventional electronics. 
 
-[Download paper here](http://www.thenanoresearch.com/work_just.asp)
+[Download paper here](https://link.springer.com/article/10.1007%2Fs12274-017-1916-5)
