@@ -6,7 +6,7 @@ excerpt: ''
 date: 2017-11-13
 venue: 'Advanced Materials Technologies'
 paperurl: 'https://doi.org/10.1002/admt.201700241'
-citation: 'Wei Yang, Nian-Wu Li, Shuyu Zhao, Zuqing Yuan, Jiaona Wang, <b>Xinyu Du</b>, Bin Wang, Ran Cao, Xiuyan Li, Weihua Xu, Zhong Lin Wang and Congju Li, "A Breathable and Screen-Print Pressure Sensor Based on Nanofiber Membranes for Electronic Skins", <b><i>Adv. Mater. Technol.</i> accepted</b> (2017)'
+citation: 'Wei Yang, Nian-Wu Li, Shuyu Zhao, Zuqing Yuan, Jiaona Wang, <b>Xinyu Du</b>, Bin Wang, Ran Cao, Xiuyan Li, Weihua Xu, Zhong Lin Wang and Congju Li, "A Breathable and Screen-Print Pressure Sensor Based on Nanofiber Membranes for Electronic Skins", <b><i>Adv. Mater. Technol.,</i></b> 1700241 (2017)'
 ---
 ### Abstract
 
