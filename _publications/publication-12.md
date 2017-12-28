@@ -6,7 +6,7 @@ excerpt: ''
 date: 2017-12-07
 venue: 'Journal of Hazardous Materials'
 paperurl: 'https://doi.org/10.1016/j.jhazmat.2017.12.041'
-citation: 'Yuebo Liu#; <b>Xinyu Du#</b>; Jiaona Wang; Yingying Yin; Bin Wang; Shuyu Zhao; Nianwu Li; Congju Li, "High Efficient Detoxification of Mustard Gas Surrogate Based on Nanofibrous Fabric", <b><i>J. Hazard. Mater. 347,</i></b> 25-30 (2018)'
+citation: 'Yuebo Liu#; <b>Xinyu Du#</b>; Jiaona Wang; Yingying Yin; Bin Wang; Shuyu Zhao; Nianwu Li; Congju Li, "High Efficient Detoxification of Mustard Gas Surrogate Based on Nanofibrous Fabric", <b><i>J. Hazard. Mater. 347</i></b>, 25-30 (2018)'
 ---
 ### Abstract
 
