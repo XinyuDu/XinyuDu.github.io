@@ -6,7 +6,7 @@ excerpt: ''
 date: 2017-12-28
 venue: 'Nano Research'
 paperurl: 'https://doi.org/10.1007/s12274-017-1951-2'
-citation: 'Ran Cao; Jiaona Wang; Shuyu Zhao; Wei Yang; Zuqing Yuan; Yingying Yin; <b>Xinyu Du</b>; Nian-Wu Li; Xiuling Zhang; Xiuyan Li; Zhong Lin Wang; Congju Li, "Self-powered nanofiber-based screen-print triboelectric sensors for respiratory monitoring", <b><i>Nano Res.</i></b> (2017)'
+citation: 'Ran Cao, Jiaona Wang, Shuyu Zhao, Wei Yang, Zuqing Yuan, Yingying Yin, <b>Xinyu Du</b>, Nian-Wu Li, Xiuling Zhang, Xiuyan Li, Zhong Lin Wang, Congju Li, "Self-powered nanofiber-based screen-print triboelectric sensors for respiratory monitoring", <b><i>Nano Res.</i></b> (2017)'
 ---
 ### Abstract
 
