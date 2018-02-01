@@ -14,6 +14,36 @@ tags:
 
 1. 写一个python程序随机生成100个6位数的地址并存入trainning_text.txt文件。
 
+  ```
+  import string  
+  import random  
+  import re  
+
+  list = [chr(i) for i in range(97,123)] + [ str(i) for i in range(10)]
+  print list 
+
+  #FH = ('.',':','/') 
+  #for f in FH:  
+  #  list.append(f)
+  #print list
+
+  def getletters(): 
+      num = random.sample(list,6)   
+      str=''  
+      value = str.join(num)  
+      return 'http://'+value+'.natappfree.cc\r\n'
+
+  text=''
+  for i in range(100):
+      text=text+getletters() 
+      
+  f=open('training_text.txt','w')
+  f.write(text)
+  f.close()
+  ```
+
+  ​
+
 2. 用命令text2image生成tif文件（其中monaco为字体名子，fonts_dir=是字体所在目录）：
 
    ```
@@ -58,9 +88,9 @@ tags:
 
 10. 最后可以测试一下，截图保存为test.png （识别的文字保存在tesseract-line文件里）
 
-   ```
-   tesseract test.png tesseract-line -l monaco
-   ```
+  ```
+  tesseract test.png tesseract-line -l monaco
+  ```
 
-   ​
+  ​
 
