@@ -42,7 +42,7 @@ tags:
   f.close()
   ```
 
-  ​
+
 
 2. 用命令text2image生成tif文件（其中monaco为字体名子，fonts_dir=是字体所在目录）：
 
