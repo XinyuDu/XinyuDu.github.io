@@ -50,7 +50,7 @@ tags:
    text2image --text=training_text.txt --outputbase=eng.monaco.exp0 --font=monaco --fonts_dir=~/orc_trainning
    ```
 
-3. 根据生成的tif文件和box文件生成tr文件
+3. 根据生成的tif文件和box文件生成tr文件 
 
    ```
    tesseract eng.monaco.exp0.tif eng.monaco.exp0 box.train.stderr
