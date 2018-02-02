@@ -44,13 +44,13 @@ tags:
 
 
 
-2. 用命令text2image生成tif文件（其中monaco为字体名子，fonts_dir=是字体所在目录）：
+2. 用命令text2image生成tif文件和box文件（其中monaco为字体名子，fonts_dir=是字体所在目录）：
 
    ```
    text2image --text=training_text.txt --outputbase=eng.monaco.exp0 --font=monaco --fonts_dir=~/orc_trainning
    ```
 
-3. 根据生成的tif文件生成box文件
+3. 根据生成的tif文件和box文件生成tr文件
 
    ```
    tesseract eng.monaco.exp0.tif eng.monaco.exp0 box.train.stderr
