@@ -6,7 +6,7 @@ excerpt: ''
 date: 2018-05-18
 venue: 'ACS Applied Energy Materials'
 paperurl: 'https://doi.org/10.1021/acsaem.8b00439'
-citation: 'Shuyu Zhao#, Jiaona Wang#, <b>Xinyu Du#</b>, Jing Wang, Ran Cao, Yingying Yin, Xiuling Zhang, Zuqing Yuan, Yi Xing, David Y. H. Pui, and Congju Li, "All-Nanofiber-Based Ultralight Stretchable Triboelectric Nanogenerator for Self-Powered Wearable Electronics", <b><i>ACS Applied Energy Materials</i></b> <b>1(5),</b> 2326-2332 (2018)'
+citation: 'Shuyu Zhao#, Jiaona Wang#, <b>Xinyu Du#</b>, Jing Wang, Ran Cao, Yingying Yin, Xiuling Zhang, Zuqing Yuan, Yi Xing, David Y. H. Pui, and Congju Li, "All-Nanofiber-Based Ultralight Stretchable Triboelectric Nanogenerator for Self-Powered Wearable Electronics", <b><i>ACS Applied Energy Materials</i></b> <b>1(5)</b>, 2326-2332 (2018)'
 ---
 ### Abstract
 

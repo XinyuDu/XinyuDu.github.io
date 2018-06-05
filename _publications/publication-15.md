@@ -6,7 +6,7 @@ excerpt: ''
 date: 2018-03-01
 venue: 'ACS Applied Materials & Interfaces'
 paperurl: 'https://doi.org/10.1021/acsami.7b18736'
-citation: 'Xiuling Zhang#, <b>Xinyu Du#</b>, Yingying Yin, Nian-Wu Li, Wei Fan, Ran Cao, Weihua Xu, Chi Zhang, Congju Li, "Lithium-Ion Batteries: Charged by Triboelectric Nanogenerators with Pulsed Output Based on the Enhanced Cycling Stability", <b><i>ACS Appl. Mater. Interfaces</i></b> <b>10(10),</b> 8676-8684 (2018)'
+citation: 'Xiuling Zhang#, <b>Xinyu Du#</b>, Yingying Yin, Nian-Wu Li, Wei Fan, Ran Cao, Weihua Xu, Chi Zhang, Congju Li, "Lithium-Ion Batteries: Charged by Triboelectric Nanogenerators with Pulsed Output Based on the Enhanced Cycling Stability", <b><i>ACS Appl. Mater. Interfaces</i></b> <b>10(10)</b>, 8676-8684 (2018)'
 ---
 ### Abstract
 

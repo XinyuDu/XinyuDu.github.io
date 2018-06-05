@@ -6,7 +6,7 @@ excerpt: ''
 date: 2010-11-20
 venue: 'Ferroelectrics'
 paperurl: 'http://dx.doi.org/10.1080/00150191003709321'
-citation: '<b>Xinyu Du</b>, Lingfei Ji, and Yjian Jiang, "Dielectric and Piezoelectric Properties of CO2 Laser Sintered Sr<sub>1.86</sub>Ca<sub>0.14</sub>NaNb<sub>5</sub>O<sub>15</sub> Piezoelectric Ceramic", <b><i>Ferroelectrics</i> 402,</b> 163-167 (2010)'
+citation: '<b>Xinyu Du</b>, Lingfei Ji, and Yjian Jiang, "Dielectric and Piezoelectric Properties of CO2 Laser Sintered Sr<sub>1.86</sub>Ca<sub>0.14</sub>NaNb<sub>5</sub>O<sub>15</sub> Piezoelectric Ceramic", <b><i>Ferroelectrics</i> 402</b>, 163-167 (2010)'
 ---
 ### Abstract
 

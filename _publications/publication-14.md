@@ -6,7 +6,7 @@ excerpt: ''
 date: 2018-01-13
 venue: 'Advanced Science'
 paperurl: 'https://doi.org/10.1002/advs.201700881'
-citation: 'Zuqing Yuan#, <b>Xinyu Du#</b>, Nianwu Li, Yingying Yin, Ran Cao, Xiuling Zhang, Shuyu Zhao, Huidan Niu, Tao Jiang, Weihua Xu, Zhong Lin Wang, Congju Li, "Triboelectric-based transparent secret code", <b><i>Adv. Sci.</i></b> <b>5,</b> 1700881 (2018)'
+citation: 'Zuqing Yuan#, <b>Xinyu Du#</b>, Nianwu Li, Yingying Yin, Ran Cao, Xiuling Zhang, Shuyu Zhao, Huidan Niu, Tao Jiang, Weihua Xu, Zhong Lin Wang, Congju Li, "Triboelectric-based transparent secret code", <b><i>Adv. Sci.</i></b> <b>5</b>, 1700881 (2018)'
 ---
 ### Abstract
 

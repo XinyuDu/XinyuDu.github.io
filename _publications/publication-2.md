@@ -6,7 +6,7 @@ excerpt: ''
 date: 2010-11-01
 venue: 'Ferroelectrics'
 paperurl: 'http://dx.doi.org/10.1080/00150193.2010.505498'
-citation: 'Lingfei Ji, <b>Xinyu Du</b>, Yan Zhao, Jie Liu, and Yijian Jiang, "Physical Properties and Structure Characteristics of Laser Prepared (Na<sub>0.5</sub>K<sub>0.5</sub>)NbO<sub>3</sub>-LiNbO<sub>3</sub> Ceramics", <b><i>Ferroelectrics</i> 400,</b> 104-112 (2010)'
+citation: 'Lingfei Ji, <b>Xinyu Du</b>, Yan Zhao, Jie Liu, and Yijian Jiang, "Physical Properties and Structure Characteristics of Laser Prepared (Na<sub>0.5</sub>K<sub>0.5</sub>)NbO<sub>3</sub>-LiNbO<sub>3</sub> Ceramics", <b><i>Ferroelectrics</i> 400</b>, 104-112 (2010)'
 ---
 ### Abstract
 

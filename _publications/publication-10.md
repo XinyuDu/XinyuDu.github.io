@@ -6,7 +6,7 @@ excerpt: ''
 date: 2017-11-08
 venue: 'Nano Research'
 paperurl: 'https://doi.org/10.1007/s12274-017-1916-5'
-citation: '<b>Xinyu Du</b>, Nianwu Li, Yuebo Liu, Jiaona Wang, Zuqing Yuan, Yingying Yin, Ran Cao, Shuyu Zhao, Bin Wang, Zhong Lin Wang, and Congju Li, "Ultra-robust  triboelectric nanogenerator for harvesting rotary mechanical energy", <b><i>Nano Res.</i></b> <b>11(5),</b> 2862-2871 (2018)'
+citation: '<b>Xinyu Du</b>, Nianwu Li, Yuebo Liu, Jiaona Wang, Zuqing Yuan, Yingying Yin, Ran Cao, Shuyu Zhao, Bin Wang, Zhong Lin Wang, and Congju Li, "Ultra-robust  triboelectric nanogenerator for harvesting rotary mechanical energy", <b><i>Nano Res.</i></b> <b>11(5)</b>, 2862-2871 (2018)'
 ---
 ### Abstract
 
