@@ -6,7 +6,7 @@ excerpt: ''
 date: 2018-06-12
 venue: 'J. Phys. D: Appl. Phys.'
 paperurl: 'https://doi.org/10.1088/1361-6463/aac55f'
-citation: 'Jinxi Zhang#, <b>Xinyu Du#</b>, Chenchen Wang1, and Kailiang Ren, "Poly(vinylidene fluoride-hexafluoropropylene) based blend film for ultrahigh energy density capacitor applications", <b><i>J. Phys. D: Appl. Phys.</i></b> <b>51</b>, 255306 (2018)'
+citation: 'Jinxi Zhang#, <b>Xinyu Du#</b>, Chenchen Wang#, and Kailiang Ren, "Poly(vinylidene fluoride-hexafluoropropylene) based blend film for ultrahigh energy density capacitor applications", <b><i>J. Phys. D: Appl. Phys.</i></b> <b>51</b>, 255306 (2018)'
 ---
 ### Abstract
 
