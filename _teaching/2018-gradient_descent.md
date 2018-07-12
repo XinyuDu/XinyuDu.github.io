@@ -16,11 +16,13 @@ location: "中国, 北京"
 
 # 2. 算法
 
+### 2.1 二元函数的梯度下降法
+
 由于我实在无法想象一个三维以上的空间，因此这里用两个自变量的函数$$f(x,y)$$来介绍算法。假设你身处一个山谷中，你的目的是到达谷底$$f_min$$，但是由于大雾你并不能看清谷底在哪里。这种情况通常我们怎么做？我们会环视一圈周围的环境然后沿着下坡且坡度最大的方向走一步。然后再环顾四周选择下坡且坡度最大的方向再走一步。如此往复，直到发现我们身处的位置往任何方向走都是上坡路。在此过程中，每一步可以将其分解为沿着x方向的一步$$\Delta x$$和沿着y方向的一步$$\Delta y$$。那么走了这一步后你的所处位置的海拔高度下降为：
 $$
 \Delta f\approx\frac{\partial f}{\partial x}\Delta x+ \frac{\partial f}{\partial y}\Delta y\tag{1}
 $$
-我们只需要控制每步$$\Delta x, \Delta y$$的大小，使得$$\Delat f$$的值为负即可。这里我们定义一个参数$$\eta$$，这里称为步长（在神经网络中称为学习速率learning rate），其值为正。令
+我们只需要控制每步$$\Delta x, \Delta y$$的大小，使得$$\Delta f$$的值为负即可。这里我们定义一个参数$$\eta$$，这里称为步长（在神经网络中称为学习速率learning rate），其值为正。令
 $$
 \Delta x=-\eta\frac{\partial f}{\partial x},\Delta y=-\eta\frac{\partial f}{\partial y}\tag{2}
 $$
@@ -32,4 +34,15 @@ $$
 $$
 x'=x-\eta\frac{\partial f}{\partial x}, y'=y-\eta\frac{\partial f}{\partial y}\tag{4}
 $$
-需要注意的是步长值不能太大，否则不能取得最小值。如同你每步迈1米远，是无法到达一个范围只有1米的山谷谷底的。
+需要注意的是步长值不能太大，否则不能取得最小值。如同你每步迈1米远，是无法到达一个范围只有1米的山谷谷底的。但是步长取的太小又会使计算时间变长。实践中人们常常使用变步长的技术，即在运算过程中变换步长大小，从而高效率的取得最小值。
+
+### 2.2 梯度下降法的一般形式
+
+上面介绍了二元函数下的算法，但是该算法不止对二元函数有效，对任意n个自变量的函数都有效。假如有函数$$f(x_1,x_2,...,x_n)$$，我们将其自变量写成向量形式$$x\equiv(x_1,x_2,...,x_n)^T$$，则$$\Delta x\equiv(\Delta x_1,\Delta x_2,...,\Delta x_n)^T$$。令
+$$
+\nabla f\equiv(\frac{\partial f}{\partial x_1},\frac{\partial f}{\partial x_1},...,\frac{\partial f}{\partial x_n})
+$$
+则
+$$
+\Delta f=\nabla f\cdot\Delta x\tag{5}
+$$
