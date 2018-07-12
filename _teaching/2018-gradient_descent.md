@@ -40,9 +40,21 @@ $$
 
 上面介绍了二元函数下的算法，但是该算法不止对二元函数有效，对任意n个自变量的函数都有效。假如有函数$$f(x_1,x_2,...,x_n)$$，我们将其自变量写成向量形式$$x\equiv(x_1,x_2,...,x_n)^T$$，则$$\Delta x\equiv(\Delta x_1,\Delta x_2,...,\Delta x_n)^T$$。令
 $$
-\nabla f\equiv(\frac{\partial f}{\partial x_1},\frac{\partial f}{\partial x_1},...,\frac{\partial f}{\partial x_n})
+\nabla f\equiv(\frac{\partial f}{\partial x_1},\frac{\partial f}{\partial x_1},...,\frac{\partial f}{\partial x_n})^T
 $$
-则
+则根据公式(1)有
 $$
-\Delta f=\nabla f\cdot\Delta x\tag{5}
+\Delta f\approx\nabla f\cdot\Delta x\tag{5}
 $$
+令：
+$$
+\Delta x=-\eta\nabla f\tag{6}
+$$
+则在n维空间中取得函数最小值的方法就是让每个自变量向量按下式不断迭代更新：
+$$
+x'=x-\eta\nabla f\tag{7}
+$$
+
+# 3. 总结
+
+梯度下降法的精髓就是公式(2),(6)。它保证了$$\Delta f$$为负，这样往复进行下去就可以得到函数的最小值。可以将其理解为沿着函数梯度的反方向行走，最终达到谷底。算法具体的应用方法是根据公式(4),(7)不断更新位置，然后计算在新位置的函数值。
