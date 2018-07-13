@@ -1,7 +1,7 @@
 ---
 title: "梯度下降法"
 collection: teaching
-type: "神经网络教程-1"
+type: "神经网络教程-0"
 permalink: /teaching/2018-gradient-descent
 venue: "杜新宇,中科院北京纳米能源与系统研究所"
 date: 2018-07-12
@@ -22,7 +22,7 @@ location: "中国, 北京"
 $$
 \Delta f\approx\frac{\partial f}{\partial x}\Delta x+ \frac{\partial f}{\partial y}\Delta y\tag{1}
 $$
-我们只需要控制每步$$\Delta x, \Delta y$$的大小，使得$$\Delta f$$的值为负即可。这里我们定义一个参数$$\eta$$，这里称为步长（在神经网络中称为学习速率learning rate），其值为正。令
+我们只需要控制每步$$\Delta x, \Delta y$$的大小，使得$$\Delta f$$的值为负即可。这里我们定义一个参数$$\eta$$，称为步长（在神经网络中称为学习速率learning rate），其值为正。令
 $$
 \Delta x=-\eta\frac{\partial f}{\partial x},\Delta y=-\eta\frac{\partial f}{\partial y}\tag{2}
 $$
@@ -30,7 +30,7 @@ $$
 $$
 \Delta f\approx-\eta(\lVert\frac{\partial f}{\partial x}\lVert^2+ \lVert\frac{\partial f}{\partial y}\lVert^2)\tag{3}
 $$
-从公式(3)可以看出，当我们令$$\Delta x, \Delta y$$像公式(2)那样取值的话，就能保证$$\Delta f$$为负。因此我们只需要按照公式(2)更新x和y的值就能最终到取到函数f的最小值。
+从公式(3)可以看出，当我们令$$\Delta x, \Delta y$$像公式(2)那样取值的话，就能保证$$\Delta f$$为负。因此我们只需要按照公式(2)更新x和y的值就能最终取得函数f的最小值。
 $$
 x'=x-\eta\frac{\partial f}{\partial x}, y'=y-\eta\frac{\partial f}{\partial y}\tag{4}
 $$
