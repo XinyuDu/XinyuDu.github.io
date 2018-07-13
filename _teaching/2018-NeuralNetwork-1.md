@@ -14,7 +14,7 @@ location: "中国, 北京"
 
 神经元是神经网络的组成元素，任何结构的神经网络模型都是由若干个神经元以某种形式组成的。典型的神经元如图1-1所示。每个神经元可以有若干个输入和输出，一个神经元的输出可以连接到另一个神经元，变成另一个神经元的输入。因此输入和输出个数取决于有多少个神经元与该神经元相连接。
 
-![1-1](2018-NeuralNetwork/1-1.png)
+<div align="center"><img src = "./2018-NeuralNetwork/1-1.png"/></div>
 
 *<center>图1-1 神经元基本结构</center>*
 
@@ -39,7 +39,7 @@ ReLU(z)=\begin{cases}0\quad if\quad z\leq0\\z\quad if \quad z>0\end{cases}\tag{1
 $$
 当自变量z的值小于等于0时，函数值为0。当自变量的值大于0时，函数值为z，如图1-2所示。
 
-![1-2](2018-NeuralNetwork/1-2.png)
+<div align="center"><img src = "./2018-NeuralNetwork/1-2.png"/></div>
 
 *<center>图1-2 ReLU函数</center>*
 
@@ -51,7 +51,7 @@ $$
 $$
 当自变量z趋于正无穷时函数趋近于1，当自变量z趋于负无穷时函数趋于0。sigmoid函数将自变量z映射到了[0,1]之间，如图1-3所示。
 
-![1-3](2018-NeuralNetwork/1-3.png)
+<div align="center"><img src = "./2018-NeuralNetwork/1-3.png"/></div>
 
 *<center>图1-3 Sigmoid函数</center>*
 
@@ -86,7 +86,7 @@ o_1=\sigma(z+b)=\frac{1}{1+e^{-(z+b)}}\tag{1-6}
 $$
 我们看看b取不同的值，sigmoid函数会发生那些变化，如图1-5所示。
 
-![1-5](2018-NeuralNetwork/1-5.png)
+<div align="center"><img src = "./2018-NeuralNetwork/1-5.png"/></div>
 
 *<center>图1-5 偏移量对输出的影响</center>*
 
