@@ -1,8 +1,8 @@
 ---
-![1-1](/media/glacier/YunDisk/Baiduyun/githubProjects/blog/xinyudu.github.io/_teaching/2018-NeuralNetwork/1-1.png)title: "神经元及神经网络的结构要素"
+title: "神经元及神经网络的结构要素"
 collection: teaching
 type: "神经网络教程-1"
-permalink: /teaching/2018-gradient-descent
+permalink: /teaching/2018-NN-1
 venue: "杜新宇,中科院北京纳米能源与系统研究所"
 date: 2018-07-13
 location: "中国, 北京"
