@@ -14,7 +14,7 @@ location: "中国, 北京"
 
 神经元是神经网络的组成元素，任何结构的神经网络模型都是由若干个神经元以某种形式组成的。典型的神经元如图1-1所示。每个神经元可以有若干个输入和输出，一个神经元的输出可以连接到另一个神经元，变成另一个神经元的输入。因此输入和输出个数取决于有多少个神经元与该神经元相连接。
 
-![1-1](2018-NeuralNetwork/1-1.png)
+<center>![1-1](2018-NeuralNetwork/1-1.png)</center>
 
 *<center>图1-1 神经元基本结构</center>*
 
@@ -39,7 +39,7 @@ ReLU(z)=\begin{cases}0\quad if\quad z\leq0\\z\quad if \quad z>0\end{cases}\tag{1
 $$
 当自变量z的值小于等于0时，函数值为0。当自变量的值大于0时，函数值为z，如图1-2所示。
 
-![1-2](2018-NeuralNetwork/1-2.png)
+<center>![1-2](2018-NeuralNetwork/1-2.png)</center>
 
 *<center>图1-2 ReLU函数</center>*
 
@@ -51,7 +51,7 @@ $$
 $$
 当自变量z趋于正无穷时函数趋近于1，当自变量z趋于负无穷时函数趋于0。sigmoid函数将自变量z映射到了[0,1]之间，如图1-3所示。
 
-![1-3](2018-NeuralNetwork/1-3.png)
+<center>![1-3](2018-NeuralNetwork/1-3.png)</center>
 
 *<center>图1-3 Sigmoid函数</center>*
 
@@ -63,7 +63,7 @@ S_i(z_i)=\frac{e^{z_i}}{\Sigma_je^{z_j}}\tag{1-4}
 $$
 Softmax函数看起来比较晦涩难懂，但其数学意义比较好理解。假设有一组数$$z_i$$，函数值是该自变量$$z_i$$的e指数与所有自变量e指数和的比值。因此，所有$$S_i$$之和为1。该函数可以保证多个神经元输出之和为1，多用于分类任务的神经网络的输出层。比如手写数字识别的神经网络，需要将手写数字分成10个类别，分别对应数字0,1,2,3,...,8,9。softmax函数的值不单单取决于某个神经元的构成元素，还与处于同一层的其他神经元相关，如图1-4所示。
 
-![1-4](2018-NeuralNetwork/1-4.png)
+<center>![1-4](2018-NeuralNetwork/1-4.png)</center>
 
 *<center>图1-4 神经元输出层</center>*
 
@@ -86,7 +86,7 @@ o_1=\sigma(z+b)=\frac{1}{1+e^{-(z+b)}}\tag{1-6}
 $$
 我们看看b取不同的值，sigmoid函数会发生那些变化，如图1-5所示。
 
-![1-5](2018-NeuralNetwork/1-5.png)
+<center>![1-5](2018-NeuralNetwork/1-5.png)</center>
 
 *<center>图1-5 偏移量对输出的影响</center>*
 
