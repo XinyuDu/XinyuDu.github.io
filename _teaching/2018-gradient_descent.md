@@ -1,7 +1,7 @@
 ---
 title: "梯度下降法"
 collection: teaching
-type: "神经网络教程-0"
+type: "人工神经网络教程-0"
 permalink: /teaching/2018-gradient-descent
 venue: "杜新宇,中科院北京纳米能源与系统研究所"
 date: 2018-07-12
