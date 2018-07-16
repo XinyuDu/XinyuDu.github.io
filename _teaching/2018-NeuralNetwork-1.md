@@ -133,7 +133,7 @@ A^3表示第三层的激活函数，A^3=\begin{bmatrix}a^3_1\\a^3_2\end{bmatrix}
 O^2表示第二层的输出，O^2=\begin{bmatrix}o^2_1\\o^2_2\\o^2_3\\o^2_4\end{bmatrix}\\
 W^3表示连接第二层与第三层之间连线的权重，W^3=\begin{bmatrix}w^3_{11}&w^3_{12}&w^3_{13}&w^3_{14}\\
 w^3_{21}&w^3_{22}&w^3_{23}&w^3_{24}\end{bmatrix}\\
-B^3表示第三层的偏移量，B^3=\begin{bmatrix}b^3_1\\b^3_2\end{bmatrix}\\
+B^3表示第三层的偏移量，B^3=\begin{bmatrix}b^3_1\\b^3_2\end{bmatrix}
 $$
 将式1-9推广为更普遍的形式可写为：
 $$
