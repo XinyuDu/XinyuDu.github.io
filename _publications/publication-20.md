@@ -6,7 +6,7 @@ excerpt: ''
 date: 2018-06-05
 venue: 'Electrochimica Acta'
 paperurl: 'https://doi.org/10.1016/j.electacta.2018.05.147'
-citation: 'Nian-Wu Li#, <b>Xinyu Du#</b>, Ji-Lei Shi, Xiuling Zhang, Wei Fan, Jiaona Wang, Shuyu Zhao, Yuebo Liu, Weihua Xu, Meicheng Li, Yu-Guo Guo, Congju Li, "Graphene@hierarchical meso-/microporous carbon for ultrahigh energy density lithium-ion capacitors", <b><i>Electrochimica Acta</i></b> <b>281</b>, 459-465 (2018)'
+citation: 'Nian-Wu Li#, <b>Xinyu Du#</b>, Ji-Lei Shi, Xiuling Zhang, Wei Fan, Jiaona Wang, Shuyu Zhao, Yuebo Liu, Weihua Xu, Meicheng Li, Yu-Guo Guo, and Congju Li, "Graphene@hierarchical meso-/microporous carbon for ultrahigh energy density lithium-ion capacitors", <b><i>Electrochimica Acta</i></b> <b>281</b>, 459-465 (2018)'
 ---
 ### Abstract
 
