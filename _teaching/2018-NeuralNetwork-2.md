@@ -40,5 +40,16 @@ $$
 
 令$$C_x=\frac{\parallel L(x)-o \parallel}{2}^2$$，则$$C=\frac{1}{n}\sum_x C_x$$。梯度向量为：$$\nabla C=\frac{1}{n}\sum_x \nabla C_x$$
 
-从训练数据集中随机选取m（m<n）条数据，
+从训练数据集中随机选取m（m<n）条数据，使得：
+$$
+\frac{\sum_1^m\nabla C_x}{m}\approx\frac{\sum_1^n\nabla C_x}{n}=\nabla C \tag{2-4}
+$$
+因此，将上式带入（2-2）和（2-3）有：
+$$
+w_k'=w_k-\frac{\eta}{m}\sum_1^m\frac{\partial C_x}{\partial w_k}\tag{2-5}
+$$
+
+$$
+b_l'=b_l-\frac{\eta}{m}\sum_1^m\frac{\partial C_x}{\partial b_l}\tag{2-6}
+$$
 
