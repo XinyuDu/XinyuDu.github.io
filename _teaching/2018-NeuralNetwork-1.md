@@ -76,7 +76,7 @@ o_3=S_3=\frac{e^{w_3\cdot i_3+b_3}}{e^{w_1\cdot i_1+b_1}+e^{w_2\cdot i_2+b_2}+e^
 $$
 很容易证明三个输出之和为1，当调整权重和偏移量使得其中一个输出增大时，必然引起另外两个输出的减小，永远保证所有输出量之和为1，这就是softmax的作用。
 
-除了上面详细介绍的ReLU，Sigmoid和Softmax形式的激活函数外还有Tanh，Swish，PReLU和RReLU等多种形式的激活函数，用法大同小异再次不再赘述。
+除了上面详细介绍的ReLU，Sigmoid和Softmax形式的激活函数外还有Tanh，Swish，PReLU和RReLU等多种形式的激活函数，用法大同小异在此不再赘述。
 
 ### 2.2 偏移量B
 

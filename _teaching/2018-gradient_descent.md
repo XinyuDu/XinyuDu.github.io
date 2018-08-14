@@ -40,7 +40,7 @@ $$
 
 上面介绍了二元函数下的算法，但是该算法不止对二元函数有效，对任意n个自变量的函数都有效。假如有函数$$f(x_1,x_2,...,x_n)$$，我们将其自变量写成向量形式$$x\equiv(x_1,x_2,...,x_n)^T$$，则$$\Delta x\equiv(\Delta x_1,\Delta x_2,...,\Delta x_n)^T$$。令
 $$
-\nabla f\equiv(\frac{\partial f}{\partial x_1},\frac{\partial f}{\partial x_1},...,\frac{\partial f}{\partial x_n})^T
+\nabla f\equiv(\frac{\partial f}{\partial x_1},\frac{\partial f}{\partial x_1},...,\frac{\partial f}{\partial x_n})
 $$
 则根据公式(1)有
 $$
@@ -48,11 +48,11 @@ $$
 $$
 令：
 $$
-\Delta x=-\eta\nabla f\tag{6}
+\Delta x=-\eta\nabla f^T\tag{6}
 $$
 则在n维空间中取得函数最小值的方法就是让自变量向量按下式不断迭代更新：
 $$
-x'=x-\eta\nabla f\tag{7}
+x'=x-\eta\nabla f^T\tag{7}
 $$
 
 # 3. 总结
