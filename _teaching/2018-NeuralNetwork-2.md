@@ -67,14 +67,16 @@ $$
 
 数学表达为<sup>1</sup>：
 $$
-\parallel f(x_i^a)-f(x_i^p) \parallel_2^2+\alpha < \parallel f(x_i^a)-f(x_i^n) \parallel_2^2\tag{2-7}
+\parallel f(x_i^a)-f(x_i^p) \parallel _2^2 + \alpha < \parallel f(x_i^a)-f(x_i^n) \parallel _2^2 \tag{2-7}
 $$
+
 其中$$f(x_i^a)$$为锚点向量，$$f(x_i^p)$$为阳性向量，$$f(x_i^n)$$为阴性向量，$$\alpha$$为阴性和阳性向量之间的必须保持的最小距离。式中下模量符号下角标的2表示将向量长度限制在1以内。
 
 因此，需要被最小化的损失函数为<sup>1</sup>：
 $$
 L=\sum_i^N[\parallel f(x_i^a)-f(x_i^p) \parallel_2^2 - \parallel f(x_i^a)-f(x_i^n) \parallel_2^2+\alpha]_+\tag{2-8}
 $$
+
 这样训练好的模型可以很好的解决一次学的问题，即只需要提供一张锚点照片，就可以进行身份判断。比如你入职时只需要提供一张照片，就可以每天进行脸部识别打卡，而不是需要你提供脸部各个角度的10几张照片才行。当然这种三态损失函数训练数据的选择也有一些技巧，可以详细阅读参考文献了解更多细节。
 
 
@@ -82,4 +84,3 @@ $$
 Reference
 
 1. Schroff, F., Kalenichenko, D., & Philbin, J. (2015). FaceNet: A unified embedding for face recognition and clustering. *Proceedings of the IEEE Computer Society Conference on Computer Vision and Pattern Recognition*, *07*–*12*–*June*, 815–823. https://doi.org/10.1109/CVPR.2015.7298682
-
