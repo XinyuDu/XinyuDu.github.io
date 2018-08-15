@@ -67,7 +67,9 @@ $$
 
 数学表达为<sup>1</sup>：
 
-$$\parallel f(x_i^a)-f(x_i^p) \parallel _2^2 +\alpha$$ < $$\parallel f(x_i^a)-f(x_i^n) \parallel _2^2}$$
+$$\parallel f(x_i^a)-f(x_i^p) \parallel _2^2 +\alpha$$ < $$\parallel f(x_i^a)-f(x_i^n) \parallel _2^2$$
+
+
 
 其中$$f(x_i^a)$$为锚点向量，$$f(x_i^p)$$为阳性向量，$$f(x_i^n)$$为阴性向量，$$\alpha$$为阴性和阳性向量之间的必须保持的最小距离。式中下模量符号下角标的2表示将向量长度限制在1以内。
 
