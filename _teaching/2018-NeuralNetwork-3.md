@@ -70,12 +70,20 @@ $$
 $$
 \delta_j^l=\frac{\partial C}{\partial z_j^l} \\=\sum_k \frac{\partial C}{\partial z_k^{l+1}}\frac{\partial z_k^{l+1}}{\partial z_j^l}\\=\sum_k \frac{\partial z_k^{l+1}}{\partial z_j^l}\delta_k^{l+1} \tag{3-8}
 $$
-至此，我们找到了（3-7）和（3-2）的关系，即$$\delta_j^l和\delt_k^{l+1}$$的关系。但式中$$z_k^{l+1}$$的具体表达形式还不清楚。将其写成权重、激活函数和偏移量的表达形式：
+至此，我们找到了（3-7）和（3-2）的关系，即$$\delta_j^l$$和$$\delt_k^{l+1}$$的关系。但式中$$z_k^{l+1}$$的具体表达形式还不清楚。将其写成权重、激活函数和偏移量的表达形式：
 $$
 z_k^{l+1}=\sum_jw_{kj}^{l+1}a_j^l+b_k^{l+1}=\sum_jw_{kj}^{l+1}\sigma(z_j^l)+b_k^{l+1} \tag{3-9}
 $$
 对式（3-9）进行偏微分计算得：
 $$
-\frac{\partial z_k^{l+1}}{\partial z_j^l}=w_kj^{l+1}\sigma'(z_j^l) \tag{3-10}
+\frac{\partial z_k^{l+1}}{\partial z_j^l}=w_{kj}^{l+1}\sigma'(z_j^l) \tag{3-10}
 $$
-将上式
+将上式带入式（3-8）则：
+$$
+\delta_j^l=\sum_kw_{kj}^{l+1}\delta_k^{l+1}\sigma'(z_j^l) \tag{3-11}
+$$
+其矩阵表达方式为：
+$$
+\delta^l=((w^{l+1})^T\delta^{l+1})\odot\sigma'(z^l)\tag{3-II}
+$$
+到此为止，我们可以利用（3-I）和（3-II）计算出任何一个神经元的误差了。但我们要的并不是误差，而是损失函数对权重和偏移量的偏导数。
