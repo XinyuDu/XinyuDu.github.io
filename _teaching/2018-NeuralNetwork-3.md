@@ -61,3 +61,21 @@ $$
 $$
 \begin{bmatrix}a_1\\a_2\end{bmatrix} \odot \begin{bmatrix}b_1\\b_2 \end{bmatrix} = \begin{bmatrix} a_1*b_1 \\ a_2*b_2 \end{bmatrix} \tag{3-6}
 $$
+
+到目前位置我们已经可以计算输出层L的误差$$\delta^L$$了，反向传播法顾名思义一下步就是如何计算L-1，L-2，...层的误差了。根据式（3-2），l+1层第k个神经元的误差为：
+$$
+\delta_k^{l+1}=\frac{\partial C}{\partial z_k^{l+1}}\tag{3-7}
+$$
+我们要做的就是找到式（3-7）和式（3-2）的关系，因此：
+$$
+\delta_j^l=\frac{\partial C}{\partial z_j^l} \\=\sum_k \frac{\partial C}{\partial z_k^{l+1}}\frac{\partial z_k^{l+1}}{\partial z_j^l}\\=\sum_k \frac{\partial z_k^{l+1}}{\partial z_j^l}\delta_k^{l+1} \tag{3-8}
+$$
+至此，我们找到了（3-7）和（3-2）的关系，即$$\delta_j^l和\delt_k^{l+1}$$的关系。但式中$$z_k^{l+1}$$的具体表达形式还不清楚。将其写成权重、激活函数和偏移量的表达形式：
+$$
+z_k^{l+1}=\sum_jw_{kj}^{l+1}a_j^l+b_k^{l+1}=\sum_jw_{kj}^{l+1}\sigma(z_j^l)+b_k^{l+1} \tag{3-9}
+$$
+对式（3-9）进行偏微分计算得：
+$$
+\frac{\partial z_k^{l+1}}{\partial z_j^l}=w_kj^{l+1}\sigma'(z_j^l) \tag{3-10}
+$$
+将上式
