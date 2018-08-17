@@ -57,7 +57,7 @@ $$
 $$
 \delta^L=\nabla_a C \odot \sigma'(z^L) \tag{3-I}
 $$
-其中$$\odot$$是Hadamard算符，表示长度相等的两个向量对应元素相乘，如：
+其中$$\nabla_aC$$是梯度向量，由$$\frac{\partial C}{\partial a_j^L}$$组成。对二次损失函数来说$$\nabla_aC=(a^L-y)$$。 所以，对于二次损失函数来说式（3-I）可写为：$$\delta^L=(a^L-y)\odot \sigma'(z^L) \tag{3-I}$$。$$\odot$$是Hadamard算符，表示长度相等的两个向量对应元素相乘，如：
 $$
 \begin{bmatrix}a_1\\a_2\end{bmatrix} \odot \begin{bmatrix}b_1\\b_2 \end{bmatrix} = \begin{bmatrix} a_1*b_1 \\ a_2*b_2 \end{bmatrix} \tag{3-6}
 $$
