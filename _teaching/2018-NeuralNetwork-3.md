@@ -39,7 +39,7 @@ $$
 $$
 \delta_j^l=\frac{\partial C}{\partial z_j^l} \tag{3-2}
 $$
-其中$$z_j^l$$为输入到第l层，第j个神经元激活函数中的参数。根据式（1-7）$$z_j^l=\Sigma_k w_{jk}^la_k^{l-1}+b_j^l$$。上式等号右边考量的是第l层，第j个神经元激活函数的参数变化，引起损失函数的变化的速度。也就是说当有$$\Delta z_j^l$$产生时，损失函数会变化$$\frac{\partial C}{\partial z_j^l} \Delta z_j^l$$。现在我们利用式（3-2）来考察输出层L的情况，L层输神经元误差：
+其中$$z_j^l$$为输入到第l层，第j个神经元激活函数中的参数。根据式（1-7）$$z_j^l=\Sigma_k w_{jk}^la_k^{l-1}+b_j^l$$。式（3-2）等号右边考量的是第l层，第j个神经元激活函数的参数变化，引起损失函数变化的速度。也就是说当有$$\Delta z_j^l$$产生时，损失函数会变化$$\frac{\partial C}{\partial z_j^l} \Delta z_j^l$$。现在我们利用式（3-2）来考察输出层L的情况，L层输神经元误差：
 $$
 \delta_j^L=\frac{\partial C}{\partial z_j^L} \tag{3-3}
 $$
@@ -57,7 +57,7 @@ $$
 $$
 \delta^L=\nabla_a C \odot \sigma'(z^L) \tag{3-I}
 $$
-其中$$\nabla_aC$$是梯度向量，由$$\frac{\partial C}{\partial a_j^L}$$组成。对二次损失函数来说$$\nabla_aC=(a^L-y)$$。 所以，对于二次损失函数来说式（3-I）可写为：$$\delta^L=(a^L-y)\odot \sigma'(z^L) \tag{3-I}$$。$$\odot$$是Hadamard算符，表示长度相等的两个向量对应元素相乘，如：
+其中$$\nabla_aC$$是梯度向量，由$$\frac{\partial C}{\partial a_j^L}$$组成。对二次损失函数来说$$\nabla_aC=(a^L-y)$$。 所以，对于二次损失函数来说式（3-I）可写为：$$\delta^L=(a^L-y)\odot \sigma'(z^L) $$其中$$\odot$$是Hadamard算符，表示长度相等的两个向量对应元素相乘，如：
 $$
 \begin{bmatrix}a_1\\a_2\end{bmatrix} \odot \begin{bmatrix}b_1\\b_2 \end{bmatrix} = \begin{bmatrix} a_1*b_1 \\ a_2*b_2 \end{bmatrix} \tag{3-6}
 $$
