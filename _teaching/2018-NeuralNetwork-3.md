@@ -39,4 +39,25 @@ $$
 $$
 \delta_j^l=\frac{\partial C}{\partial z_j^l} \tag{3-2}
 $$
-其中$$z_j^l$$为输入到第l层，第j个神经元激活函数中的参数。根据式（1-7）$$z_j^l=\Sigma_k w_j^lo_k^{l-1}+b_j^l$$。
+其中$$z_j^l$$为输入到第l层，第j个神经元激活函数中的参数。根据式（1-7）$$z_j^l=\Sigma_k w_j^lo_k^{l-1}+b_j^l$$。上式等号右边考量的是第l层，第j个神经元激活函数的参数变化，引起损失函数的变化的速度。也就是说当有$$\Delta z_j^l$$产生时，损失函数会变化$$\frac{\partial C}{\partial z_j^l} \Delta z_j^l$$。现在我们利用式（3-2）来考察输出层L的情况，L层输神经元误差：
+$$
+\delta_j^L=\frac{\partial C}{\partial z_j^L} \tag{3-3}
+$$
+由于$$z_j^L$$并不是损失函数的直接自变量，它是通过激活函数来最终影响损失函数的值。因此，我们将式（3-3）进行一下变形，将激活函数引入：
+$$
+\delta_j^L=\frac{\partial C}{\partial a_j^L}\frac{\partial a_j^L}{\partial z_j^L} \tag{3-4}
+$$
+当激活函数为sigmoid函数时，$$a_j^L=\sigma(z_j^L)$$则上式等号右边第二项可以写成$$\sigma'(z_j^L)$$，因此上式可写为:
+$$
+\delta_j^L=\frac{\partial C}{\partial a_j^L}\sigma'(z_j^L) \tag{3-5}
+$$
+
+
+其矩阵形式表达为：
+$$
+\delta^L=\nabla_a C \odot \sigma'(z^L) \tag{3-I}
+$$
+其中$$\odot$$是Hadamard算符，表示长度相等的两个向量对应元素相乘，如：
+$$
+\begin{bmatrix}a_1\\a_2\end{bmatrix} \odot \begin{bmatrix}b_1\\b_2 \end{bmatrix} = \begin{bmatrix} a_1*b_1 \\ a_2*b_2 \end{bmatrix} \tag{3-6}
+$$
