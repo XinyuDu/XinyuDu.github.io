@@ -39,7 +39,7 @@ $$
 $$
 \delta_j^l=\frac{\partial C}{\partial z_j^l} \tag{3-2}
 $$
-其中$$z_j^l$$为输入到第l层，第j个神经元激活函数中的参数。根据式（1-7）$$z_j^l=\Sigma_k w_j^lo_k^{l-1}+b_j^l$$。上式等号右边考量的是第l层，第j个神经元激活函数的参数变化，引起损失函数的变化的速度。也就是说当有$$\Delta z_j^l$$产生时，损失函数会变化$$\frac{\partial C}{\partial z_j^l} \Delta z_j^l$$。现在我们利用式（3-2）来考察输出层L的情况，L层输神经元误差：
+其中$$z_j^l$$为输入到第l层，第j个神经元激活函数中的参数。根据式（1-7）$$z_j^l=\Sigma_k w_{kj}^la_k^{l-1}+b_j^l$$。上式等号右边考量的是第l层，第j个神经元激活函数的参数变化，引起损失函数的变化的速度。也就是说当有$$\Delta z_j^l$$产生时，损失函数会变化$$\frac{\partial C}{\partial z_j^l} \Delta z_j^l$$。现在我们利用式（3-2）来考察输出层L的情况，L层输神经元误差：
 $$
 \delta_j^L=\frac{\partial C}{\partial z_j^L} \tag{3-3}
 $$
@@ -70,7 +70,7 @@ $$
 $$
 \delta_j^l=\frac{\partial C}{\partial z_j^l} \\=\sum_k \frac{\partial C}{\partial z_k^{l+1}}\frac{\partial z_k^{l+1}}{\partial z_j^l}\\=\sum_k \frac{\partial z_k^{l+1}}{\partial z_j^l}\delta_k^{l+1} \tag{3-8}
 $$
-至此，我们找到了（3-7）和（3-2）的关系，即$$\delta_j^l$$和$$\delt_k^{l+1}$$的关系。但式中$$z_k^{l+1}$$的具体表达形式还不清楚。将其写成权重、激活函数和偏移量的表达形式：
+至此，我们找到了（3-7）和（3-2）的关系，即$$\delta_j^l$$和$$\delta_k^{l+1}$$的关系。但式中$$z_k^{l+1}$$的具体表达形式还不清楚。将其写成权重、激活函数和偏移量的表达形式：
 $$
 z_k^{l+1}=\sum_jw_{kj}^{l+1}a_j^l+b_k^{l+1}=\sum_jw_{kj}^{l+1}\sigma(z_j^l)+b_k^{l+1} \tag{3-9}
 $$
@@ -86,4 +86,36 @@ $$
 $$
 \delta^l=((w^{l+1})^T\delta^{l+1})\odot\sigma'(z^l)\tag{3-II}
 $$
-到此为止，我们可以利用（3-I）和（3-II）计算出任何一个神经元的误差了。但我们要的并不是误差，而是损失函数对权重和偏移量的偏导数。
+到此为止，我们可以利用（3-I）和（3-II）计算出任何一个神经元的误差了。但我们要的并不是误差，而是损失函数对权重和偏移量的偏导数。损失函数对偏移量的偏微分为：
+$$
+\frac{\partial C}{\partial b_j^l}=\frac{\partial C}{\partial z_j^l}\frac{\partial z_j^l}{\partial b_j^l}\tag{3-12}
+$$
+将式（3-2）带入上式，并参考式（3-9）对$$z_j^l$$做偏微分计算得到：
+$$
+\frac{\partial C}{\partial b_j^l}=\delta_j^l\tag{3-III}
+$$
+同样的，损失函数对权重的偏微分为：
+$$
+\frac{\partial C}{\partial w_{jk}^l}=\frac{\partial C}{\partial z_j^l}\frac{\partial z_j^l}{\partial w_{jk}^l}\tag{3-13}
+$$
+将式（3-2）带入上式，并参考（3-9）计算$$\frac{\partial z_j^l}{\partial w_{jk}^l}$$得到：
+$$
+\frac{\partial C}{\partial w_{jk}^l}=\delta_j^la_k^{l-1}\tag{3-IV}
+$$
+我们得到的（3-I）～（3-IV）就是反向传播算法的四个基本公式：
+$$
+\delta^L=\nabla_a C \odot \sigma'(z^L) \tag{3-I}
+$$
+
+$$
+\delta^l=((w^{l+1})^T\delta^{l+1})\odot\sigma'(z^l)\tag{3-II}
+$$
+
+$$
+\frac{\partial C}{\partial b_j^l}=\delta_j^l\tag{3-III}
+$$
+
+$$
+\frac{\partial C}{\partial w_{jk}^l}=\delta_j^la_k^{l-1}\tag{3-IV}
+$$
+
