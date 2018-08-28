@@ -22,4 +22,13 @@ location: "中国, 北京"
 $$
 C=\frac{(y-a)^2}{2}\tag{4-1}
 $$
-式中$$a$$为当输入值为1时神经元的输出值，y=0是输入值为1时神经元的期望输出值。这里激活函数我们选用sigmoid函数，因此$$a=\sigama (z)$$，$$z=wx+b$$。
+式中a为当输入x=1时神经元的输出值，y=0是输入值为1时神经元的期望输出值。这里激活函数我们选用sigmoid函数，因此，a=\sigma (z)，z=wx+b。将其带入式4-1并对损失函数求偏微分可得：
+$$
+\frac{\partial C}{\partial w}=(a-y)\sigma'(z)x=a\sigma'(z)\tag{4-2}
+$$
+
+$$
+\frac{\partial C}{\partial b}=(a-y)\sigma'(z)=a\sigma'(z)\tag{4-3}
+$$
+
+sigmoid函数如图4-2所示，当其函数值接近1时，曲线非常平坦，因此函数的导数$$\sigma'$$非常小。所以导致式4-2和4-3的值非常小
