@@ -31,7 +31,7 @@ $$
 \frac{\partial C}{\partial b}=(a-y)\sigma'(z)=a\sigma'(z)\tag{4-3}
 $$
 
-sigmoid函数如图4-2所示，当其函数值接近1时，曲线非常平坦，因此函数的导数\sigma'非常小。所以导致式4-2和4-3的值非常小。这是导致学习速度降低的根本原因。
+sigmoid函数如图4-2所示，当其函数值接近1时，曲线非常平坦，因此函数的导数$$\sigma'$$非常小。所以导致式4-2和4-3的值非常小。这是导致学习速度降低的根本原因。
 
 ![1-3](2018-NeuralNetwork/1-3.png)
 
@@ -39,3 +39,26 @@ sigmoid函数如图4-2所示，当其函数值接近1时，曲线非常平坦，
 
 # 2.交叉熵损失函数
 
+
+
+![4-3](2018-NeuralNetwork/4-3.png)
+
+*<center>图4-3 三个输入值的单神经元网络</center>*
+
+为了避免学习速度降低，我们构建了一种新型的损失函数来代替二次损失函数。首先，将我们的单神经元网络稍微扩展一下，将输入量个数增加到三个，如图4-3所示。新的损失函数称为**交叉熵损失函数**的定义如下：
+$$
+C=-\frac{1}{n}\sum_x[ylna+(1-y)ln(1-a)]\tag{4-4}
+$$
+观察式4-4可以发现：1.函数值一定大于0。因为$$a$$和$$1-a$$的值都在[0,1]之间，因此$$lna$$和$$ln(1-a)$$小于0，所以C大于0。2. 对训练数据集中的所有数据x，其输出值非常接近期望输出值时，该损失函数值接近0。这两个性质和之前介绍的二次损失函数的性质相同，但是交叉熵损失函数具有更为优秀的性质，即学习速度不会变慢。我们通过对交叉熵损失函数求偏导数来证明这点：
+$$
+\frac{\partial C}{\partial w_j}=-\frac{1}{n}\sum_x(\frac{y}{\sigma(z)}-\frac{(1-y)}{1-\sigma(z)})\frac{\partial \sigma}{\partial w_j}=-\frac{1}{n}\sum_x(\frac{y}{\sigma(z)}-\frac{(1-y)}{1-\sigma(z)})\sigma'(z)x_j\tag{4-5}
+$$
+上式中\sigma'(z)=\sigma(z)(1-\sigma(z))，证明如下：
+$$
+\sigma(z)=\frac{1}{1-e^{-z}}\\ \sigma'(z)=\frac{\partial \sigma}{\partial z}=\frac{\partial \sigma}{\partial (1-e^{-z})}\frac{\partial (1-e^{-z})\sigma}{\partial e^{-z}}\frac{\partial e^{-z}}{\partial z}\\ =-\frac{1}{(1-e^{-z})^2}(-1)(-e^{-z})\\ =\frac{1}{1-e^{-z}}\frac{-e^{-z}}{1-e^{-z}}\\ =\sigma(z)(1-\sigma(z))
+$$
+将证明结果带入式4-5可得：
+$$
+\frac{\partial C}{\partial w_j}=\frac{1}{n}\sum_x x_j(\sigma(z)-y)\tag{4-6}
+$$
+与式4-2相比发现改用交叉熵损失函数后导致学习速度变慢的$$\sigma'(z)$$项消失了。并且惊喜的是不但学习速率不会变慢，而且具有输出和期望输出值差距$$\sigma(z)-y}$$越大学习速率越快。
