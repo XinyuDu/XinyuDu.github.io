@@ -6,7 +6,7 @@ excerpt: ''
 date: 2018-05-28
 venue: 'ACS Nano'
 paperurl: 'https://doi.org/10.1021/acsnano.8b02477'
-citation: 'Ran Cao, Xianjie Pu, <b>Xinyu Du</b>, Wei Yang, Jiaona Wang, Hengyu Guo, Shuyu Zhao, Zuqing Yuan, Chi Zhang, Congju Li*, and Zhong Lin Wang, "Screen-Printed Washable Electronic Textiles as Self-Powered Touch/Gesture Tribo-Sensors for Intelligent Human–Machine Interaction", <b><i>ACS Nano</i></b> (2018)'
+citation: 'Ran Cao, Xianjie Pu, <b>Xinyu Du</b>, Wei Yang, Jiaona Wang, Hengyu Guo, Shuyu Zhao, Zuqing Yuan, Chi Zhang, Congju Li*, and Zhong Lin Wang, "Screen-Printed Washable Electronic Textiles as Self-Powered Touch/Gesture Tribo-Sensors for Intelligent Human–Machine Interaction", <b><i>ACS Nano</i> 12(6)</b> 5190-5196 (2018)'
 ---
 ### Abstract
 

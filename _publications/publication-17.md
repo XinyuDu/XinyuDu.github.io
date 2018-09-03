@@ -6,7 +6,7 @@ excerpt: ''
 date: 2018-04-23
 venue: 'Advanced Materials Technologies'
 paperurl: 'https://doi.org/10.1002/admt.201800065'
-citation: 'Hui Li#, Shuyu Zhao#,<b>Xinyu Du#</b>, Jiaona Wang, Ran Cao, Yi Xing, and Congju Li, "A compound yarn based wearable triboelectric nanogenerator for self-powered wearable electronics", <b><i>Advanced Materials Technologies</i></b> (2018)'
+citation: 'Hui Li#, Shuyu Zhao#,<b>Xinyu Du#</b>, Jiaona Wang, Ran Cao, Yi Xing, and Congju Li, "A compound yarn based wearable triboelectric nanogenerator for self-powered wearable electronics", <b><i>Advanced Materials Technologies</i> 3(6)</b> 1800065 (2018)'
 ---
 ### Abstract
 
