@@ -7,7 +7,7 @@ date: 2018-07-20
 venue: 'ACS Appl. Mater. Interfaces'
 paperurl: 'https://doi.org/10.1021/acsami.8b05966'
 citation: '<b>Xinyu Du</b>, Yuebo Liu, Jiaona Wang, Huidan Niu, Zuqing Yuan, Shuyu Zhao, 
-Xiuling Zhang, Ran Cao, Yingying Yin, Nianwu Li, Chi Zhang, Yi Xing, Weihua Xu, and Congju Li, "Improved Triboelectric Nanogenerator Output Performance through Polymer Nanocomposites Filled with Core–shell-Structured Particles", <b><i>ACS Appl. Mater. Interfaces</i> 10(30)</b> 25683-25688 (2018)'
+Xiuling Zhang, Ran Cao, Yingying Yin, Nianwu Li, Chi Zhang, Yi Xing, Weihua Xu, and Congju Li, "Improved Triboelectric Nanogenerator Output Performance through Polymer Nanocomposites Filled with Core–shell-Structured Particles", <b><i>ACS Appl. Mater. Interfaces</i> 10(30)</b>, 25683-25688 (2018)'
 ---
 ### Abstract
 

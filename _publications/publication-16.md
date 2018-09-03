@@ -6,7 +6,7 @@ excerpt: ''
 date: 2018-04-15
 venue: 'Advanced Materials Technologies'
 paperurl: 'https://doi.org/10.1002/admt.201800019'
-citation: '<b>Xinyu Du</b>, Shuyu Zhao, Yi Xing, Nianwu Li, Jiaona Wang, Xiuling Zhang, Ran Cao, Yuebo Liu, Zuqing Yuan, Yingying Yin, Zhong Lin Wang, Congju Li, "Hybridized Nanogenerator for Harvesting Vibrational Energy by Triboelectric-Piezoelectric-Electromagnetic Effects", <b><i>Advanced Materials Technologies</i> 3(6)</b> 1800019 (2018)'
+citation: '<b>Xinyu Du</b>, Shuyu Zhao, Yi Xing, Nianwu Li, Jiaona Wang, Xiuling Zhang, Ran Cao, Yuebo Liu, Zuqing Yuan, Yingying Yin, Zhong Lin Wang, Congju Li, "Hybridized Nanogenerator for Harvesting Vibrational Energy by Triboelectric-Piezoelectric-Electromagnetic Effects", <b><i>Advanced Materials Technologies</i> 3(6)</b>, 1800019 (2018)'
 ---
 ### Abstract
 
