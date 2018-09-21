@@ -47,4 +47,4 @@ $$
 
 # 参考文献
 
-1.Silver, D., Schrittwieser, J., Simonyan, K., Antonoglou, I., Huang, A., Guez, A., … Sifre, L. (2017). Mastering the game of Go without human knowledge. *Nature, *550*(7676), 354–359. https://doi.org/10.1038/nature24270
+1.Silver, D., Schrittwieser, J., Simonyan, K., Antonoglou, I., Huang, A., Guez, A., … Sifre, L. (2017). Mastering the game of Go without human knowledge. *Nature*, 550(7676), 354–359. https://doi.org/10.1038/nature24270
