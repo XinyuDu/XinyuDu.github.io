@@ -6,7 +6,7 @@ excerpt: ''
 date: 2018-10-16
 venue: 'RSC Advances'
 paperurl: 'https://doi.org/10.1039/C8RA05305G'
-citation: 'Huidan Niu, <b>Xinyu Du</b>, Shuyu Zhao, Zuqing Yuan, Xiuling Zhang, Ran Cao, Yingying Yin, Chi Zhang, Tao Zhou and Congju Li, "Polymer nanocomposite-enabled high-performance triboelectric nanogenerator with self-healing capability", <b><i>RSC Adv.</i> 8,</b> 30661-30668 (2018)'
+citation: 'Huidan Niu#, <b>Xinyu Du#</b>, Shuyu Zhao, Zuqing Yuan, Xiuling Zhang, Ran Cao, Yingying Yin, Chi Zhang, Tao Zhou and Congju Li, "Polymer nanocomposite-enabled high-performance triboelectric nanogenerator with self-healing capability", <b><i>RSC Adv.</i> 8,</b> 30661-30668 (2018)'
 ---
 ### Abstract
 
