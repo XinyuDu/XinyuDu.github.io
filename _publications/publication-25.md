@@ -6,7 +6,7 @@ excerpt: ''
 date: 2019-2-24
 venue: 'Nanoscale'
 paperurl: 'https://doi.org/10.1039/C8NR08406H'
-citation: 'Zuqing Yuan#, Xinyu Du#, Huidan Niu, Nianwu Li, Guozhen Shen, Congju Li  and Zhong Lin Wang, "Motion recognition by a liquid filled tubular triboelectric nanogenerator", <b><i>Nanoscale</i> 11,</b> 495-503 (2019)'
+citation: 'Zuqing Yuan#, <b>Xinyu Du#</b>, Huidan Niu, Nianwu Li, Guozhen Shen, Congju Li  and Zhong Lin Wang, "Motion recognition by a liquid filled tubular triboelectric nanogenerator", <b><i>Nanoscale</i> 11,</b> 495-503 (2019)'
 ---
 ### Abstract
 
