@@ -1,0 +1,15 @@
+---
+title: "Motion recognition by a liquid filled tubular triboelectric nanogenerator"
+collection: publications
+permalink: /publication/publication-25
+excerpt: ''
+date: 2019-2-24
+venue: 'Nanoscale'
+paperurl: 'https://doi.org/10.1039/C8NR08406H'
+citation: 'Zuqing Yuan, Xinyu Du, Huidan Niu, Nianwu Li, Guozhen Shen, Congju Li  and Zhong Lin Wang, "Motion recognition by a liquid filled tubular triboelectric nanogenerator", <b><i>Nanoscale</i> 11,</b> 495-503 (2019)'
+---
+### Abstract
+
+The development of flexible electronics has extended the limit of the intelligent devices, which are highly sensitive, soft and capable of sustaining arbitrary deformation. Here, we report a liquid-polymer tubular triboelectric nanogenerator (L-P TENG) that is filled with liquid for a shape-adaptive sensor in various working modes. The L-P TENG is based on liquid–solid contact electrification with the use of displacement current and excited by the shape change of the tubular structure. The high softness of the device makes it possible to be twisted to any curve and bear extreme strain. It can be used to detect a slight difference in pressure from touch, pressing and stretching and is suitable for a wide-range force recognition with high sensitivity. The independent and multifunctional properties of the L-P TENG extend the potential applications through combinations. Such assembled units with crossings can sense the approaching object. This study provides a new direction for flexible electromechanical sensing and has potential applications in self-powered sensors, wearable electronics, smart human–machine interaction and auxiliary motion correction.Triboelectric nanogenerators (TENG) have been proven to be effective for the collection of low-frequency vibrational energy in the environment. However, most polymer materials as friction layers are highly susceptible to mechanical damage during operation, which reduces the performance and lifetime of TENG. Herein, we report a high-performance, flexible triboelectric nanogenerator with reproducible self-healing electronic characteristics. Based on its soft and flexible polymers, the self-healing triboelectric nanogenerator (SH-TENG) can achieve a peak power of 2.5 W m<sup>−2</sup> and triboelectric charge density of about 100 μC m<sup>−2</sup>. High-conductance Ag nanowires (AgNWs) are semi-embedded in the polymer to fabricate all-in-one friction layers and for an enhanced self-healing process. Both the output voltage and current of the healed device can reach up to about 99% of their original values even after five cutting/healing cycles. The fabricated SH-TENG has excellent stability and flexibility, which presents a significant step towards the fabrication of reliable triboelectric nanogenerators with recoverability and low maintenance costs.
+
+ [[Download paper here]](https://doi.org/10.1039/C8NR08406H)
