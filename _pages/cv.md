@@ -17,7 +17,8 @@ Education
 
 Work experience
 ===============
-* 2015-now: Assistant Researcher, Beijing Institute of Nanoenergy and Nanosystems, Chinese Academy of Sciences.
+* 2018-now: Architect, JD.com, Inc.
+* 2015-2018: Assistant Researcher, Beijing Institute of Nanoenergy and Nanosystems, Chinese Academy of Sciences.
 * 2013-2015: Postdoc, International Center for Quantum Materials, Peking University.
 * 2010-2013: Manager of R&D department, Beijing Salien Corporation.
   
