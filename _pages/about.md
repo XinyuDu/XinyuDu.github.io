@@ -12,7 +12,7 @@ redirect_from:
 
 联系方式
 ======
-办公室：京东大厦A坐19层。
+办公室：京东大厦A坐19层。  
 邮箱：duxinyu_at_pku.edu.cn  
 个人主页：www.duxinyu.cn
 
