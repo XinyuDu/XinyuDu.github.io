@@ -1,8 +1,8 @@
 ---
 title: "REINFORCE算法"
 collection: teaching
-type: "强化学习教程-1"
-permalink: /teaching/2021-RL-1
+type: "强化学习教程-2"
+permalink: /teaching/2021-RL-2
 venue: "杜新宇,京东"
 date: 2021-05-27
 location: "中国, 北京"
