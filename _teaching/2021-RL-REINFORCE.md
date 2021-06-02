@@ -10,7 +10,7 @@ location: "中国, 北京"
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
-# 1.策略梯度
+## 1.策略梯度
 
 **REINFORCE**算法是强化学习中常用的一个算法，属于策略梯度算法。强化学习的目标是，最大化累加的收益
 
@@ -109,7 +109,7 @@ $$
 
 
 
-## 3.伪代码
+## 3.算法逻辑
 
 1.给策略模型的参数$$\theta$$随机赋值初始化。
 
