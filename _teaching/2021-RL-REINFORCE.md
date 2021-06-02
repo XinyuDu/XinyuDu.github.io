@@ -105,5 +105,20 @@ $$
 \hat{g}=\frac{1}{\mid\mathcal{D}\mid}\sum_{\tau\in\mathcal{D}} \sum_{t=0}^{T}\nabla_\theta log\pi_\theta(a_t |s_t)R(\tau)\tag{8}
 $$
 
-
 其中：$$\mid\mathcal{D}\mid$$是我们收集的迹集合中**迹的数量**。$$\pi_\theta$$是一个以$$\theta$$为参数的神经网络模型，$$R(\tau)$$是agent与environment互动中获得的累加收益。因此，式(8)完全可以用计算机计算得出。计算得出的数值带入式(2)即可完成模型的训练。
+
+
+
+## 3.伪代码
+
+1.给策略模型的参数$$\theta$$随机赋值初始化。
+
+2.用初始化的策略模型$$\pi_\theta$$产生一个迹：$$S_1,A_1,R_2,S_2,A_2,...,S_T$$。
+
+3.For t=1,2,...,T:
+
+&emsp;1.估计回报$$G_t$$
+
+&emsp;2.更新策略模型参数：$$\theta\leftarrow\theta+\alpha\gamma^2G_t\nabla_\theta log\pi_\theta(A_t\mid S_t)$$
+
+通常会在$$G_t$$中减去一个基础值，从而使得梯度数据分布的方差降低的同时保持偏差不变。普遍的做法是从动作价值中减去状态价值，称为优势值advantage：$$A(s,a)=Q(s,a)-V(s)$$。因此，常常使用优势值A来更新策略模型的参数。
