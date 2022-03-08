@@ -14,10 +14,10 @@ location: "中国, 北京"
 
 首先，我们根据小品卖拐的故事，构建一个超级简单的环境（ENV），该ENV可以根据action产生state和reward。这个ENV只有两个状态和两个动作，之所以称之为超级简单就是因为其动作空间和状态空间都很小。两个状态分别为：$$S_1$$相遇，$$S_2$$卖拐。两个动作分别为：$$A_1$$攀谈，$$$A_2$$离开，如下表所示。
 
-| S\A                                                          | <img src="/home/glacier/xinyudu.github.io/_teaching/2021-RL/talk.png" style="zoom: 33%;" />$$A_1$$ | <img src="/home/glacier/xinyudu.github.io/_teaching/2021-RL/run.png" style="zoom:33%;" />$$A_2$$ |
+| S\A                                                          | <img src="./2021-RL/talk.png" style="zoom: 33%;" />$$A_1$$ | <img src="./2021-RL/run.png" style="zoom:33%;" />$$A_2$$ |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| <img src="/home/glacier/xinyudu.github.io/_teaching/2021-RL/meet.png" style="zoom:25%;" /> $$S_1$$ |                                                              |                                                              |
-| <img src="/home/glacier/xinyudu.github.io/_teaching/2021-RL/buy.png" style="zoom:25%;" />$$S_2$$ |                                                              |                                                              |
+| <img src="./2021-RL/meet.png" style="zoom:25%;" /> $$S_1$$ |                                                              |                                                              |
+| <img src="./2021-RL/buy.png" style="zoom:25%;" />$$S_2$$ |                                                              |                                                              |
 
 
 
@@ -71,7 +71,7 @@ location: "中国, 北京"
 
 
 
-上述ENV中，范伟就是agent。他可以根据不同的state，采取不同的action。在相遇这个状态时他有两种选择，离开或者攀谈。如果agent选择攀谈这个动作，不会产生任何后果，因此ENV会给出reward=0，如果agent选择离开这个动作，大忽悠会说你看他腿有病，给范伟造成心灵伤害，因此ENV会给出reward=-10。
+上述ENV中，范伟就是agent。他可以根据不同的state，采取不同的action。在**相遇**这个状态时，范伟有两个选择，离开或者攀谈。如果选择***攀谈***这个动作，不会产生任何后果，因此ENV会给出reward=0，如果选择***离开***这个动作，大忽悠会说你看他腿有病，给范伟造成心灵伤害，因此ENV会给出reward=-10。在**卖拐**这个状态时，范伟也有两个选择，***攀谈***和***离开***。如果继续***攀谈***就会被忽悠住，因此ENV给出reward=-100。如果***离开***，则没被忽悠住，ENV给出reward=100。
 
 
 ## 3.算法
