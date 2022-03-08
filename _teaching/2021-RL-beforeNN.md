@@ -10,19 +10,68 @@ location: "中国, 北京"
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
-## 1.卖拐
+## 1.卖拐ENV
 
-首先，我们根据小品卖拐的故事，构建一个超级简单的环境（ENV），从而可以根据action产生state和reward。这个ENV只有两个状态和两个动作，之所以称之为超级简单就是因为其动作空间和状态空间都很小。两个状态分别为：$$S_1$$相遇，$$S_2$$卖拐。两个动作分别为：$$A_1$$攀谈，$$$A_2$$离开。
+首先，我们根据小品卖拐的故事，构建一个超级简单的环境（ENV），该ENV可以根据action产生state和reward。这个ENV只有两个状态和两个动作，之所以称之为超级简单就是因为其动作空间和状态空间都很小。两个状态分别为：$$S_1$$相遇，$$S_2$$卖拐。两个动作分别为：$$A_1$$攀谈，$$$A_2$$离开，如下表所示。
 
-|                                                              | <img src="/home/glacier/xinyudu.github.io/_teaching/2021-RL/talk.png" style="zoom: 33%;" />$$A_1$$ | <img src="/home/glacier/xinyudu.github.io/_teaching/2021-RL/run.png" style="zoom:33%;" />$$A_2$$ |
+| S\A                                                          | <img src="/home/glacier/xinyudu.github.io/_teaching/2021-RL/talk.png" style="zoom: 33%;" />$$A_1$$ | <img src="/home/glacier/xinyudu.github.io/_teaching/2021-RL/run.png" style="zoom:33%;" />$$A_2$$ |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | <img src="/home/glacier/xinyudu.github.io/_teaching/2021-RL/meet.png" style="zoom:25%;" /> $$S_1$$ |                                                              |                                                              |
 | <img src="/home/glacier/xinyudu.github.io/_teaching/2021-RL/buy.png" style="zoom:25%;" />$$S_2$$ |                                                              |                                                              |
 
 
 
-
 ## 2.基本概念
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+上述ENV中，范伟就是agent。他可以根据不同的state，采取不同的action。在相遇这个状态时他有两种选择，离开或者攀谈。如果agent选择攀谈这个动作，不会产生任何后果，因此ENV会给出reward=0，如果agent选择离开这个动作，大忽悠会说你看他腿有病，给范伟造成心灵伤害，因此ENV会给出reward=-10。
 
 
 ## 3.算法
