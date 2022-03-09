@@ -96,8 +96,10 @@ $$
 
 5. 如果$$S_{t+1}=terminal$$，即episode结束，更新Q：
 		$$Q(S_t,A_t)\leftarrow Q(S_t,A_t)+\alpha [R_{t+1}-Q(S_t,A_t)]$$
-   否则，更新Q:
    
-      $$Q(S_t,A_t)\leftarrow Q(S_t,A_t)+\alpha [R_{t+1}+\gamma Q(S_{t+1},A_{t+1})-Q(S_t,A_t)]$$
+
+​      否则，更新Q:
+​          $$Q(S_t,A_t)\leftarrow Q(S_t,A_t)+\alpha [R_{t+1}+\gamma Q(S_{t+1},A_{t+1})-Q(S_t,A_t)]$$
 
 ​        回到第3步。
+
