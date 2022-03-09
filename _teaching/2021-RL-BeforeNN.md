@@ -87,19 +87,13 @@ $$
 算法描述如下：
 
 1. 初始化Q表格，表格行数为状态集合中的元素个数，表格列数为动作集合中的元素个数。我们卖拐例子的Q表格是2x2的。Q表格中的值初始化为全0。
-
 2. agent处在任何状态$$S_t$$下，采取的动作$$A_t$$通过查Q表确定。采取的动作为该行Q值最大对应的动作。
-
 3. agent采取动作后ENV给出reward $$R_{t+1}$$和下一个状态$$S_{t+1}$$。
-
 4. 根据Q表格选择状态$$S_{t+1}$$下的最佳动作$$A_{t+1}$$。
-
-5. 如果$$S_{t+1}=terminal$$，即episode结束，更新Q：
-		$$Q(S_t,A_t)\leftarrow Q(S_t,A_t)+\alpha [R_{t+1}-Q(S_t,A_t)]$$
-   
-
-​      否则，更新Q:
-​          $$Q(S_t,A_t)\leftarrow Q(S_t,A_t)+\alpha [R_{t+1}+\gamma Q(S_{t+1},A_{t+1})-Q(S_t,A_t)]$$
-
-​        回到第3步。
+5. 更新Q：
+   如果$$S_{t+1}=terminal$$，即episode结束，更新Q：
+   	$$Q(S_t,A_t)\leftarrow Q(S_t,A_t)+\alpha [R_{t+1}-Q(S_t,A_t)]$$
+   否则，更新Q:
+   	$$Q(S_t,A_t)\leftarrow Q(S_t,A_t)+\alpha [R_{t+1}+\gamma Q(S_{t+1},A_{t+1})-Q(S_t,A_t)]$$
+   回到第3步。
 
