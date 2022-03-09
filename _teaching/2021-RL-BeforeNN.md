@@ -58,7 +58,8 @@ $$
 
 当范伟遇见大忽悠时，他并不知道ENV根据他的各种action会反馈多少reward，这对他来说是未知的。这就需要他和ENV持续不断的交互，来获得ENV的信息，从而获得上述Q表格中的具体值。这个过程就就是**训练**。
 
-3.1时序差分(**TD**, Temporal-Difference Learning)<br>
+### 3.1时序差分(**TD**, Temporal-Difference Learning)<br>
+
 $$
 \begin{array}{l}
 V(S_t)\leftarrow V(S_t)+\alpha[G_t-V(S_t)]
@@ -105,3 +106,46 @@ $$
    	$$Q(S_t,A_t)\leftarrow Q(S_t,A_t)+\alpha [R_{t+1}+\gamma Q(S_{t+1},A_{t+1})-Q(S_t,A_t)]$$<br>
    回到第3步。
 
+### 3.2 Q-Learning
+
+Sarsa算法的第2步和第4步选取动作时，使用的Q表格为同一个。因此，该算法属于On-Policy算法。也就是选取$$A_t和A_{t+1}$$时，遵循的是同一个策略及Q表格。我们也可以在一个回合结束后就更新Q表格，然后用更新后的Q表格确定$$A_{t+1}$$。走一步更新一次，这样更符合直觉。要达到这个效果，原理上需要将Sarsa算法中$$A_{t+1}$$这项去掉。<br>
+$$
+\begin{array}{l}
+\quad A_{t+1}=\arg\max \limits_a Q(S_{t+1},a)\\
+将上式带入\\
+\quad Q(S_{t+1},A_{t+1})\\
+=Q[S_{t+1},\arg\max\limits_a Q(S_{t+1},a)]\\
+=\max \limits_{a \in A} Q(S_{t+1},a)
+\end{array}
+$$
+<br>
+
+上式加了max使得$$A_{t+1}$$消失。将上式带入Sarsa的更新公式得：<br>
+$$
+\begin{array}{l}
+Q(S_t,A_t)\leftarrow Q(S_t,A_t)+\alpha [R_{t+1}+\gamma \max \limits_{a \in A} Q(S_{t+1},a)-Q(S_t,A_t)]
+\end{array}
+$$
+<br>
+
+因此算法描述如下：
+
+1. 初始化Q表格，表格行数为状态集合中的元素个数，表格列数为动作集合中的元素个数。我们卖拐例子的Q表格是2x2的。Q表格中的值初始化为全0。
+2. agent处在任何状态$$S_t$$下，采取的动作$$A_t$$通过查Q表确定。采取的动作为该行Q值最大对应的动作。
+3. agent采取动作后ENV给出reward $$R_{t+1}$$和下一个状态$$S_{t+1}$$。
+4. 更新Q：<br>
+   如果$$S_{t+1}=terminal$$，即episode结束，更新Q：<br>
+   	$$Q(S_t,A_t)\leftarrow Q(S_t,A_t)+\alpha [R_{t+1}-Q(S_t,A_t)]$$ <br>
+   否则，更新Q:<br>
+   	$$Q(S_t,A_t)\leftarrow Q(S_t,A_t)+\alpha [R_{t+1}+\gamma \max \limits_{a \in A} Q(S_{t+1},a)-Q(S_t,A_t)]$$<br>
+   回到第2步。
+
+可以看到，Q-learning算法每执行一个回合就更新一次Q表格。只需要从ENV获得下一个状态就可以更新Q表格。
+
+
+
+### 3.3 冒险
+
+上述算法不论Sarsa还是Q-learning，都存在一个bug。即由于$$\arg\max\limits_a Q(S_{t+1},a)$$的存在，使得在agent与ENV交互时总是走老路（比如卖拐例子中，总是走图中黑色箭头的路径），尤其当你用0初始化Q表格时。这样无论训练多少个episode，都不可能得到最优解。我们采取的办法是让agent有一定概率$$\epsilon$$不按照$$\arg\max\limits_a Q(S_{t+1},a)$$这种贪婪的策略采取行动，而是随机选一个动作执行。因此，$$1-\epsilon$$概率用贪婪策略选动作执行，$$\epsilon$$概率随机选动作执行。称这种策略为$$\epsilon-greedy$$策略。
+
+将这种冒险策略加到上述的算法中去，就形成了完整的Sarsa和Q-learning算法。
