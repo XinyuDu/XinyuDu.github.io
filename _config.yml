@@ -89,8 +89,8 @@ author:
   binnlink         : "http://www.binn.cas.cn"
   icqm             : "北京大学国际量子材料中心"
   icqmlink         : "http://icqm.pku.edu.cn/"
-  bjut             : "北京工业大学激光研究院"
-  bjutlink         : "http://jgy.bjut.edu.cn/"
+  # bjut             : "北京工业大学激光研究院"
+  # bjutlink         : "http://jgy.bjut.edu.cn/"
   googlescholar    :
   email            :
   uri              :
