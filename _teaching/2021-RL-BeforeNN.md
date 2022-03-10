@@ -226,8 +226,8 @@ class SarsaAgent(object):
     
     def learn(self, current_state, action, reward, next_state, next_action, terminal):
         '''
-        Q(S_t,A_t) <- Q(S_t,A_t) + alph[R_t+1+gammaQ(S_t+1,A_t+1)-Q(S_t,A_t)]
-        根据算法中的更新公式，更新Q表格中，当前状态（行），当前action（列）的对应值Q_sa
+        Q(S_t,A_t) <- Q(S_t,A_t) + alph[R_t+1+gamma*Q(S_t+1,A_t+1)-Q(S_t,A_t)]
+        根据算法中的更新公式，更新Q表格中当前状态（行），当前action（列）的对应值Q_sa
         '''
         Q_sa = self.Q[current_state][action] #当前Q值
         Q_sa_next = self.Q[next_state][next_action] #下一时刻Q值
@@ -242,7 +242,7 @@ class SarsaAgent(object):
 class QLAgent(SarsaAgent):
     def learn(self, current_state, action, reward, next_state, next_action, terminal):
         '''
-        Q(S_t,A_t) <- Q(S_t,A_t) + alph[R_t+1+gammaQ(S_t+1,A_t+1)-Q(S_t,A_t)]
+        Q(S_t,A_t) <- Q(S_t,A_t) + alph[R_t+1+gamma*maxQ(S_t+1,a)-Q(S_t,A_t)]
         根据算法中的更新公式，更新Q表格中，当前状态（行），当前action（列）的对应值Q_sa
         '''
         Q_sa = self.Q[current_state][action] #当前Q值
