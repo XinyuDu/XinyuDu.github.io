@@ -360,3 +360,16 @@ Episode 190, Total reward 100
 ```
 
 从运行结果可以看出，初始Q表格都是0。当训练了170个episode后，老范具有了真正的智慧。他可以在交互过程中采取更聪明的action，获得最大的累加收益。从运行结果能看出强化学习的几个特点：1.需要Agent和ENV不断交互进行训练。2.强化学习不止考虑当前利益，而是通过考虑长远利益而采取行动。比如，在**相遇**状态时，***离开***reward=10，而***攀谈***reward=0，如果只考虑当前利益的话一定会选择***离开***。而强化学习算法引入了冒险、累加收益等机制。通过多次互动，全面的学习ENV内在运行机制，从而选择最佳action获得全局最大收益。3.强化学习擅长决策问题，通过构建一个策略（Q表格），来选择更聪明的action，从而获得全局最大收益。
+
+最后对比理解一下Sarsa和Q-Learning算法的差异。从代码可以看出，SarsaAgent是QLAgent的基类。除了learn方法不同，其余完全一致。在learn方法中，不同处仅仅为方法内最后一行更新Q值的代码。
+
+```python
+#Sarsa算法如下：
+self.Q[current_state][action] = Q_sa + self.alpha*(reward + self.gamma*Q_sa_next-Q_sa)
+#Q-Learning算法如下：
+self.Q[current_state][action] = Q_sa + self.alpha*(reward + self.gamma*np.max(Q_s_next)-Q_sa) 
+```
+
+对比可以看出，不同处为等号右侧括号内第二项乘号右侧项。Sarsa为Q_sa_next，即根据下一个状态，下一个动作查表得到的Q值。Q-Learning为np.max(Q_s_next)，即下一个状态中，最大的Q值。如下图所示，Q-Learning算法中，该项为确定的。如图中红色箭头所示，从状态$$S_t$$转移到状态$$S_{t+1}$$的过程中，该项为红色圆圈标注的最大值。而Sarsa算法中，该项不确定，因为在状态转移过程中，Sarsa算法需要先确定$$A_{t+1}$$，在这个过程中由于冒险机制的存在，有一定概率挑选的Q值不是该行最大的，如图中黑色标注所示。
+
+<img src="./2021-RL/Qtable.png" />
