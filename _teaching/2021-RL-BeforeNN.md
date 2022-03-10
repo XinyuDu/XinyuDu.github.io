@@ -147,3 +147,217 @@ $$
 ### 3.3 冒险
 
 上述算法不论Sarsa还是Q-learning，都存在一个bug。即由于$$\arg\max\limits_a Q(S_{t+1},a)$$的存在，使得在agent与ENV交互时总是走老路（比如卖拐例子中，总是走图中黑色箭头的路径），尤其当你用0初始化Q表格时。这样无论训练多少个episode，都不可能得到最优解。我们采取的办法是让agent有一定概率$$\epsilon$$不按照$$\arg\max\limits_a Q(S_{t+1},a)$$这种贪婪的策略采取行动，而是随机选一个动作执行。因此，$$1-\epsilon$$概率用贪婪策略选动作执行，$$\epsilon$$概率随机选动作执行。称这种策略为$$\epsilon-greedy$$策略。将这种冒险策略加到上述的算法中去，就形成了完整的**Sarsa**和**Q-learning**算法。
+
+
+
+## 4. 是时候展现真正的技术了
+
+上代码：
+
+首先，根据我们卖拐的剧情，构建一个简单的ENV类。ENV类只包括两个方法，reset和step。reset负责重置ENV，step负责和agent交互。
+
+```python
+import numpy as np
+
+class ENV(object):
+    def __init__(self):
+        self.terminal = False
+        self.state = 0 #0代表状态相遇，１代表状态卖拐。
+        
+    def reset(self):
+        self.terminal = False
+        self.state = 0
+        
+        return self.state
+        
+    def step(self, action):
+        '''根据action返回reward和新的state
+           action为0代表攀谈，1代表离开。
+        '''
+        if self.state == 0: #相遇
+            if action==0: #攀谈
+                self.reward = 0
+                self.state = 1
+            else: #离开
+                self.reward = 10
+                self.terminal = True
+        else: #卖拐
+            if action==0: #攀谈
+                self.reward = -100
+                self.terminal = True
+            else: #离开
+                self.reward = 100
+                self.terminal = True
+            
+        return self.state, self.reward, self.terminal
+```
+
+然后，我们构建Agent类。SarsaAgent和QLAgent分别代表Sarsa和Q-learning两种算法。
+
+```python
+class SarsaAgent(object):
+    def __init__(self, state_dim, action_dim, learning_rate=0.1, gamma=0.9, epsilon=0.1):
+        self.state_dim = state_dim #状态空间大小，有多少个状态就是几。
+        self.action_dim = action_dim #动作空间大小，有多少个动作就是几。
+        self.alpha = learning_rate #学习率，对应公式里的alpha
+        self.gamma = gamma #累加因子对应公式里的gamma
+        self.epsilon = epsilon #冒险系数，对应公式里的epsilon
+        self.Q = np.zeros([state_dim, action_dim]) #Q表格，有多少个状态就有多少行，有多少个动作就有多少列。
+        
+    def getAction(self, current_state):
+        random_p = np.random.uniform(0,1) #在标准高斯分布上随机选一个值
+        
+        if random_p<(1-self.epsilon): #如果随机值小于1-epsilon，则根据Q表格查询在当前状态下的最优动作。
+            action = self.getActionByQ(current_state)
+        else: #否则，随机选取一个动作。
+            action = np.random.choice(self.action_dim)
+        
+        return action
+    
+    def getActionByQ(self, current_state):
+        '''
+        根据状态，查Q表格获得最优action
+        '''
+        Q_row = self.Q[current_state] #从Q表格中选出目前状态对应的行。
+        maxQ = np.max(Q_row) #获得改行的最大值。
+        actions = np.where(Q_row==maxQ)[0] #将所有最大值所对应的列号组成动作集合。
+        action = np.random.choice(actions) #在动作集合中随机选取一个动作。
+        
+        return action
+    
+    def learn(self, current_state, action, reward, next_state, next_action, terminal):
+        '''
+        Q(S_t,A_t) <- Q(S_t,A_t) + alph[R_t+1+gammaQ(S_t+1,A_t+1)-Q(S_t,A_t)]
+        根据算法中的更新公式，更新Q表格中，当前状态（行），当前action（列）的对应值Q_sa
+        '''
+        Q_sa = self.Q[current_state][action] #当前Q值
+        Q_sa_next = self.Q[next_state][next_action] #下一时刻Q值
+        if terminal: #episode结束时，更新Q值
+            self.Q[current_state][action] = Q_sa + self.alpha*(reward-Q_sa)
+        else: #更新Q值
+            self.Q[current_state][action] = Q_sa + self.alpha*(reward + self.gamma*Q_sa_next-Q_sa)
+            
+    def showQTable(self):
+        print(self.Q)
+        
+class QLAgent(SarsaAgent):
+    def learn(self, current_state, action, reward, next_state, next_action, terminal):
+        '''
+        Q(S_t,A_t) <- Q(S_t,A_t) + alph[R_t+1+gammaQ(S_t+1,A_t+1)-Q(S_t,A_t)]
+        根据算法中的更新公式，更新Q表格中，当前状态（行），当前action（列）的对应值Q_sa
+        '''
+        Q_sa = self.Q[current_state][action] #当前Q值
+        Q_s_next = self.Q[next_state] #下一状态Q值
+        if terminal: #episode结束时，更新Q值
+            self.Q[current_state][action] = Q_sa + self.alpha*(reward-Q_sa)
+        else: #更新Q值
+            self.Q[current_state][action] = Q_sa + self.alpha*(reward + self.gamma*np.max(Q_s_next)-Q_sa)        
+```
+
+最后，我们让Agent和ENV多次交互从而达到训练目的。
+
+```python
+def episode(env, LF):
+    '''
+    agent与ENV互动一个episode，
+    在此过程中对Q表格进行更新，直到episode结束。
+    env: ENV对象
+    LF： 老范的拼音缩写， Agent的对象
+    '''
+    total_reward = 0 #一个episode获得的总reward
+    state = env.reset() #初始化ENV
+    action = LF.getAction(state) #根据state获得action
+    
+    while True:
+        next_state, reward, terminal = env.step(action) #用action跟ENV互动，获得下一个状态，reward和是否episode结束标志符
+        next_action = LF.getAction(next_state) #根据下一个state获得下一个action
+        LF.learn(state,action,reward,next_state,next_action,terminal) #更新Q表格
+        total_reward += reward #累加reward
+        action = next_action #准备下一次互动，更新action
+        state = next_state #准备下一次互动，更新state
+
+        if terminal: #到达终点则结束循环
+            break
+    
+    return total_reward
+
+env = ENV()
+
+###以下算法二选一，注释掉不用的那行###
+LF = SarsaAgent(2,2) #这里让老范具有sarsa算法的思维
+# LF = QLAgent(2,2) #这里让老范具有Q-learning散发的思维
+
+LF.showQTable()
+
+for ep in range(1, 200):   
+    total_reward = episode(env, LF)
+    if ep%10==0:
+        print("Episode {}, Total reward {}".format(ep, total_reward))
+        LF.showQTable()
+```
+
+运行上述代码的输出如下所示（由于代码中存在随机采样，因此你运行的结果与我的不可能完全相同）：
+
+```pyton
+[[0. 0.]
+ [0. 0.]]
+Episode 10, Total reward 10
+[[0.        6.5132156]
+ [0.        0.       ]]
+Episode 20, Total reward 10
+[[0.         8.78423345]
+ [0.         0.        ]]
+Episode 30, Total reward 10
+[[0.         9.57608842]
+ [0.         0.        ]]
+Episode 40, Total reward 10
+[[0.         9.85219117]
+ [0.         0.        ]]
+Episode 50, Total reward 10
+[[0.         9.94846225]
+ [0.         0.        ]]
+Episode 60, Total reward 10
+[[0.        9.9820299]
+ [0.        0.       ]]
+Episode 70, Total reward 10
+[[  0.           9.99226446]
+ [-10.          10.        ]]
+Episode 80, Total reward 10
+[[  0.9          9.99700309]
+ [-10.          19.        ]]
+Episode 90, Total reward 10
+[[  0.9          9.99895504]
+ [-10.          19.        ]]
+Episode 100, Total reward 10
+[[  0.9          9.99963565]
+ [-10.          19.        ]]
+Episode 110, Total reward 10
+[[  0.9          9.99987296]
+ [-10.          19.        ]]
+Episode 120, Total reward 10
+[[  2.52         9.99995078]
+ [-10.          27.1       ]]
+Episode 130, Total reward 10
+[[  2.52         9.99998284]
+ [-10.          27.1       ]]
+Episode 140, Total reward 10
+[[  2.52         9.99999402]
+ [-10.          27.1       ]]
+Episode 150, Total reward 10
+[[  2.52         9.99999791]
+ [-10.          27.1       ]]
+Episode 160, Total reward 10
+[[  2.52         9.99999927]
+ [-10.          27.1       ]]
+Episode 170, Total reward 100
+[[ 13.472496     9.99999961]
+ [-10.          52.17031   ]]
+Episode 180, Total reward 100
+[[ 43.67449528   9.99999965]
+ [-10.          81.46979811]]
+Episode 190, Total reward 100
+[[ 61.82752158   9.99999965]
+ [-19.          92.82102012]]
+```
+
+从运行结果可以看出，初始Q表格都是0。当训练了170个episode后，老范具有了真正的智慧。他可以在与卖拐ENV交互过程中，获得最大的累加收益。
