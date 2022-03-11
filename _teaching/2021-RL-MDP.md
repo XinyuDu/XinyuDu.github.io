@@ -16,7 +16,7 @@ location: "中国, 北京"
 
 <div align="center"><img src = "./2021-RL/agent-environments.jpg"/></div>
 
-其中，**agent**负责学习和做决策，除agent以外的都称为**environment**，上图中的Environment和Interpreter其实都属于**environment**。在某个时刻***t***，agent通过观察环境的状态***state<sub>t</sub>***，做出决策，采取行动***action<sub>t</sub>***，从环境获得收益***reward<sub>t</sub>***并且通过观察得到一个新的状态***state<sub>t+1</sub>***。类比下棋可以很好的理解这个过程。
+其中，**agent**负责学习和做决策，除agent以外的都称为**environment**，上图中的Environment和Interpreter其实都属于**environment**。在某个时刻***t***，agent通过观察环境的状态***state<sub>t</sub>***，做出决策，采取行动***action<sub>t</sub>***，从环境获得收益***reward<sub>t+1</sub>***并且通过观察得到一个新的状态***state<sub>t+1</sub>***。类比下棋可以很好的理解这个过程。
 
 ​		agent做决策的过程是典型的Markov decision process (**MDP**)，可以用下述五元组的形式描述：
 $$
