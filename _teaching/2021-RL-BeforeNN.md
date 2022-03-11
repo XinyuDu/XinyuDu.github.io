@@ -1,8 +1,8 @@
 ---
 title: "神经网络出现前的强化学习"
 collection: teaching
-type: "强化学习教程-6"
-permalink: /teaching/2021-RL-6
+type: "强化学习教程-1"
+permalink: /teaching/2021-RL-1
 venue: "杜新宇,京东"
 date: 2022-03-08
 location: "中国, 北京"

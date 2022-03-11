@@ -1,8 +1,8 @@
 ---
 title: "强化学习问题的框架"
 collection: teaching
-type: "强化学习教程-1"
-permalink: /teaching/2021-RL-1
+type: "强化学习教程-0"
+permalink: /teaching/2021-RL-0
 venue: "杜新宇,京东"
 date: 2021-05-27
 location: "中国, 北京"
