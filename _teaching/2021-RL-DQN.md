@@ -24,8 +24,30 @@ location: "中国, 北京"
 
 ## 2.用神经网络替换Q表格
 
-上一节，介绍TD和Q-Learning算法时，用了一个简单的例子-卖拐。在卖拐的ENV中，状态是离散值，要么是0代表相遇，要么是1代表卖拐。这种场景可以很好的用TD或Q-Learning算法解决。因为状态值离散且有限，意味着Q表格的行数是一定的。而在有些场景下，状态是连续的，即使强行使其离散化，也会导致状态数目太多，由于内存无法存储超多行数的Q表格而无法计算。因此，我们需要找到一种方法，该方法可以接受连续状态值，输出该状态下不同action的Q值。
+上一节，介绍TD和Q-Learning算法时，用了一个简单的例子-卖拐。在卖拐的ENV中，状态是离散值，要么是0代表相遇，要么是1代表卖拐。这种场景可以很好的用TD或Q-Learning算法解决。因为状态值离散且有限，意味着Q表格的行数是一定的。而在有些场景下，状态是连续的，即使强行使其离散化，也会导致状态数目太多，由于内存无法存储超多行数的Q表格而无法计算。因此，我们需要找到一种方法，该方法可以接收连续状态值，输出该状态下不同action的Q值。这时，神经网络就走上了舞台中央。在强化学习中，神经网络(**NN**-Neural Network)的作用是拟合Q值。通过agent和ENV的多次互动来获得训练NN的数据。
 
-## 3.算法
+在Q-Learning算法中，更新Q值的公式为：<br>
+$$
+\begin{array}{l}
+Q(S_t,A_t)\leftarrow Q(S_t,A_t)+\alpha [R_{t+1}+\gamma \max \limits_{a \in A} Q(S_{t+1},a)-Q(S_t,A_t)] \\
+TargetQ = R_{t+1}+\gamma \max \limits_{a \in A} Q(S_{t+1},a)
+\end{array}
+$$
+<br>
+
+我们将上式中括号内，减号左边的项称为TargetQ值。在Q-Learning算法中，就是让Q值去不断的逼近TargetQ值。一旦Q=TargetQ，上式中括号内为0，Q值不再更新，训练也就完成了。当然这是理想情况，一般不会发生。
+
+因此，我们可以构建NN的Loss function为：<br>
+$$
+\begin{array}{l}
+LOSS_{DQN}=\parallel Target Q-Q \parallel \\
+\quad \quad \quad\quad\quad=[R_{t+1}+\gamma \max \limits_{a \in A} Q(S_{t+1},a)-Q(S_t,A_t)]^2
+\end{array}
+$$
+<br>
+
+因此，我们只需要用梯度下降等方法，根据Loss function来优化NN的参数即可。至此，我们找到了用神经网络代替Q表格，来进行强化学习的方法。这种将多层神经网络和强化学习相结合的方法称为深度强化学习**DRL**。
+
+## 3.DQN算法
 
 ## 4.OpenAI gym环境
