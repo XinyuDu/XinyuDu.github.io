@@ -1,3 +1,14 @@
+---
+title: "BM25在RAG场景上的优化"
+collection: teaching
+type: "RAG-1"
+permalink: /teaching/2024-RAG-1
+venue: "杜新宇,中国联通AI创新中心"
+date: 2024-08-22
+location: "中国, 北京"
+---
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 # BM25 for RAG with Milvus
 
 ## 1. TF-IDF
