@@ -8,7 +8,7 @@ date: 2024-08-22
 location: "中国, 北京"
 ---
 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+<script type="text/javascript" src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML'></script>
 # BM25 for RAG with Milvus
 
 ## 1. TF-IDF
