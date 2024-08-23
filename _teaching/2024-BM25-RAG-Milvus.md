@@ -1,4 +1,12 @@
-
+---
+title: "BM25在RAG场景上的优化"
+collection: teaching
+type: "RAG-1"
+permalink: /teaching/2024-RAG-1
+venue: "杜新宇,中国联通AI创新中心"
+date: 2024-08-22
+location: "中国, 北京"
+---
 <head>
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
     <script type="text/x-mathjax-config">
@@ -10,17 +18,6 @@
         });
     </script>
 </head>
----
-title: "BM25在RAG场景上的优化"
-collection: teaching
-type: "RAG-1"
-permalink: /teaching/2024-RAG-1
-venue: "杜新宇,中国联通AI创新中心"
-date: 2024-08-22
-
-location: "中国, 北京"
----
-
 # BM25 for RAG with Milvus
 
 ## 1. TF-IDF
