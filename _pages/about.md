@@ -12,9 +12,9 @@ redirect_from:
 
 联系方式
 ======
-办公室：京东大厦A坐19层。  
-邮箱：duxinyu_at_pku.edu.cn  
-个人主页：www.duxinyu.cn
+办公室：雍和壹中心B8座3层。  
+邮箱：duxy71@chinaunicom.cn  
+个人主页：xinyudu.github.io
 
 教育背景
 ======
